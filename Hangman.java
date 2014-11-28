@@ -54,7 +54,15 @@ public class Hangman extends ConsoleProgram {
 	public void playGame() {
 			while (guessCounter > 0) {
 				println("You have " + guessCounter + " guesses left.");
-				String guess = readLine("Enter a letter: ");
+				String getChar = readLine("Enter a letter: ");
+				char ch = getChar.charAt(0);
+				for (int i = 0; i< hiddenWord.length(); i++) {
+					if (ch == hiddenWord.charAt(i)) {
+						println("MotherFucker!");
+						
+						
+					}
+				}
 				
 				guessCounter--;
 			}
