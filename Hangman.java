@@ -21,7 +21,7 @@ public class Hangman extends ConsoleProgram {
 	/** Tracks the number of guesses the player has */
 	private int guessCounter = 8;
 	
-	private String hiddenWord = pickWord();
+	private String hiddenWord;
 	
 	private String word = scrambleWord();
 
@@ -37,10 +37,10 @@ public class Hangman extends ConsoleProgram {
 		printWelcomeMessage();
 	}
 	
-	private String pickWord() {
+	private void pickWord() {
 		int index = rgen.nextInt(0,9);
-		String result = hangmanWords.getWord(index);
-		return result;
+		hiddenWord = hangmanWords.getWord(index);
+		
 	}
 	
 	public String scrambleWord() {
