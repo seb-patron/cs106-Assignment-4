@@ -31,7 +31,7 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	public void setUpGame() {
-		int index = rgen.nextInt(0,9);
+		int index = rgen.nextInt(0,0);
 		hiddenWord = hangmanWords.getWord(index);
 		println(scrambleWord());
 		printWelcomeMessage();
