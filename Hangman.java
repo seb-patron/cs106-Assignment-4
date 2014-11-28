@@ -64,7 +64,10 @@ public class Hangman extends ConsoleProgram {
 			for (int i = 0; i< hiddenWord.length(); i++) {
 				if (ch == hiddenWord.charAt(i)) {
 					println("MotherFucker!");
-				//	word = ch;
+					for (int j = 0; i< hiddenWord.length(); i++) {
+						word += word.charAt(j);
+						if (j==i) word+= ch;
+					}
 					println(word);
 				}
 			}
