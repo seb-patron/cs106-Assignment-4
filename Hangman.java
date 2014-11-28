@@ -97,10 +97,9 @@ public class Hangman extends ConsoleProgram {
 	}
 	
 	public String checkNumLetters(String getChar) {
-		while (getChar.length() > 1) {
+		if (getChar.length() > 1) {
 			println("You may only enter one letter at a time.");
 			getChar = readLine("Enter a letter: ");
-			if (getChar.length() > 1) break;
 		}
 		return getChar;
 	}
