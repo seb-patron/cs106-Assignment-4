@@ -31,7 +31,7 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	public void setUpGame() {
-		pickWord();
+		hiddenWord = pickWord();
 		println(hiddenWord);
 		println(word);
 		printWelcomeMessage();
@@ -39,9 +39,8 @@ public class Hangman extends ConsoleProgram {
 	
 	private String pickWord() {
 		int index = rgen.nextInt(0,9);
-		hiddenWord = hangmanWords.getWord(index);
-		return hiddenWord;
-		
+		String result = hangmanWords.getWord(index);
+		return result;
 	}
 	
 	public String scrambleWord() {
