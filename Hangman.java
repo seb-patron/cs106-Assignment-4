@@ -62,6 +62,7 @@ public class Hangman extends ConsoleProgram {
 				println("You have " + guessCounter + " guesses left.");
 				String getChar = readLine("Enter a letter: ");
 				char ch = getChar.charAt(0);
+				ch = Character.toUpperCase(ch);
 				for (int i = 0; i< hiddenWord.length(); i++) {
 					String ravioli = hiddenWord;
 					if (ch == ravioli.charAt(i)) {
