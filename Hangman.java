@@ -81,7 +81,7 @@ public class Hangman extends ConsoleProgram {
 	public char getCharacter() {
 		String getChar = readLine("Enter a letter: ");
 		checkNumLetters(getChar);
-		checkIfLetter(getChar);
+		//checkIfLetter(getChar);
 		char ch = getChar.charAt(0);
 		if (Character.isLowerCase(ch)) {
 			ch = Character.toUpperCase(ch);
@@ -98,8 +98,8 @@ public class Hangman extends ConsoleProgram {
 //	}
 	
 	public String checkNumLetters(String getChar) {
-		while (getChar.length() > 1) {
-			println("You may only enter one letter at a time.");
+		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0))) {
+			println("You may only enter one, valid letter at a time.");
 			getChar = readLine("Enter a letter: ");
 			if (getChar.length() > 1) break;
 		}
