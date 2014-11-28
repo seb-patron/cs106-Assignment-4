@@ -80,24 +80,24 @@ public class Hangman extends ConsoleProgram {
 
 	public char getCharacter() {
 		String getChar = readLine("Enter a letter: ");
-		checkNumLetters(getChar);
-		//checkIfLetter(getChar);
+		checkInput(getChar);
 		char ch = getChar.charAt(0);
-		if (Character.isLowerCase(ch)) {
+		if (Character.isLowerCase(ch)) { //converts lower case letters to upper case
 			ch = Character.toUpperCase(ch);
 		}
 		return ch;
 	}
 	
-//	private String checkInput(String getChar) {
-//		while (getChar.length() >1 || Character.isDigit(getChar.charAt(0))) {
-//			checkNumLetters(getChar);
-//			checkIfLetter(getChar);
-//		}
-//		return getChar;
-//	}
-	
-	public String checkNumLetters(String getChar) {
+
+	/*
+	 * Checks to make sure that input is valid. Valid Input is input that is only
+	 * one character long and is a letter, not a digit. 
+	 * 
+	 * 1st part of while statement evaluates to see if string is longer than one 
+	 * letter, second part check if it is a digit. Breaks when both conditions
+	 * are satisified
+	 */
+	public String checkInput(String getChar) {
 		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0))) {
 			println("You may only enter one, valid letter at a time.");
 			getChar = readLine("Enter a letter: ");
@@ -106,11 +106,5 @@ public class Hangman extends ConsoleProgram {
 		return getChar;
 	}
 	
-	private String checkIfLetter( String getChar) {
-		while (Character.isDigit(getChar.charAt(0))) {
-			println("You have to enter a valid letter.");
-			getChar = readLine("Enter a letter: ");
-		}
-		return getChar;
-	}
+
 }
