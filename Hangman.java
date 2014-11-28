@@ -22,7 +22,7 @@ public class Hangman extends ConsoleProgram {
 	
 	private String hiddenWord;
 	
-	private int wordLength = hiddenWord.length();
+
 
 	public void run() {
 		setUpGame();
@@ -45,6 +45,7 @@ public class Hangman extends ConsoleProgram {
 	}
 	
 	public void printWelcomeMessage() {
+		int wordLength = hiddenWord.length();
 		println("Welcome to Hangman!");
 		println("The hiddenword is " + wordLength + " letters long.");
 	}
