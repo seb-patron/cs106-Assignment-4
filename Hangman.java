@@ -21,7 +21,7 @@ public class Hangman extends ConsoleProgram {
 	private int guessCounter = 8;
 
 	public void run() {
-		while (true) {
+		for (int i = 0 ; i<10; i++) {
 			String hiddenWord = hangmanWords.getWord(6);
 			println(hiddenWord);
 		}
