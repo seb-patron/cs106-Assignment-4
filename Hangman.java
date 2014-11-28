@@ -21,6 +21,7 @@ public class Hangman extends ConsoleProgram {
 	private int guessCounter = 8;
 
 	public void run() {
-		println("faggot");
+		String hiddenWord = hangmanWords.getWord(6);
+		println(hiddenWord);
 	}
 }
