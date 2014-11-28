@@ -12,22 +12,26 @@ import acm.util.*;
 import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
-	
+
 	private HangmanLexicon words = new HangmanLexicon();
-	
+
 	private HangmanCanvas canvas = new HangmanCanvas();
 
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-		public void init() {
-			canvas = new HangmanCanvas();
-			add(canvas);
-		}
+	/** Tracks the number of guesses the player has */
+	private int guessCounter = 8;
+
+	public void init() {
+		canvas = new HangmanCanvas();
+		add(canvas);
+	}
 
 
 	public void run() {
 		int index = 5;
 		println(words.getWord(index));
-		
+
 
 	}
 
