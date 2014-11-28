@@ -10,6 +10,7 @@ import acm.program.*;
 import acm.util.*;
 
 import java.awt.*;
+import java.io.IOException;
 
 public class Hangman extends ConsoleProgram {
 
@@ -22,11 +23,11 @@ public class Hangman extends ConsoleProgram {
 	
 	private String hiddenWord;
 	
-
+	private Character x;
 
 	public void run() {
 		setUpGame();
-	//	playGame();
+		playGame();
 	}
 
 	public void setUpGame() {
@@ -48,5 +49,12 @@ public class Hangman extends ConsoleProgram {
 		int wordLength = hiddenWord.length();
 		println("Welcome to Hangman!");
 		println("The hiddenword is " + wordLength + " letters long.");
+	}
+	
+	public void playGame() {
+			while (guessCounter > 0) {
+				println("You have " + guessCounter + " guesses left.");
+				String guess = readLine("Enter a letter: ");
+			}
 	}
 }
