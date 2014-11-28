@@ -59,6 +59,7 @@ public class Hangman extends ConsoleProgram {
 
 	public void playGame() {
 		while (guessCounter > 0) {
+		printGameStatus();
 		char ch = getCharacter();
 			for (int i = 0; i< hiddenWord.length(); i++) {
 				if (ch == hiddenWord.charAt(i)) {
