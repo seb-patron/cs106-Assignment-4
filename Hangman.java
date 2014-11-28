@@ -19,12 +19,17 @@ public class Hangman extends ConsoleProgram {
 
 	/** Tracks the number of guesses the player has */
 	private int guessCounter = 8;
+	
+	private String hiddenWord;
 
 	public void run() {
-		for (int i = 0 ; i<10; i++) {
-			String hiddenWord = hangmanWords.getWord(6);
-			println(hiddenWord);
-		}
+		setUpGame();
+	//	playGame();
+	}
 
+	public void setUpGame() {
+		int index = rgen.nextInt(0,9);
+		hiddenWord = hangmanWords.getWord(index);
+		println(hiddenWord);
 	}
 }
