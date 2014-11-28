@@ -22,10 +22,10 @@ public class Hangman extends ConsoleProgram {
 	/** Tracks the number of guesses the player has */
 	private int guessCounter = 8;
 
-	public void init() {
-		canvas = new HangmanCanvas();
-		add(canvas);
-	}
+//	public void init() {
+//		canvas = new HangmanCanvas();
+//		add(canvas);
+//	}
 
 
 	public void run() {
