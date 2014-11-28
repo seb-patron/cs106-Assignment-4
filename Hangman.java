@@ -21,6 +21,8 @@ public class Hangman extends ConsoleProgram {
 	private int guessCounter = 8;
 	
 	private String hiddenWord;
+	
+	private int wordLength = hiddenWord.length();
 
 	public void run() {
 		setUpGame();
@@ -31,6 +33,7 @@ public class Hangman extends ConsoleProgram {
 		int index = rgen.nextInt(0,9);
 		hiddenWord = hangmanWords.getWord(index);
 		println(scrambleWord());
+		printWelcomeMessage();
 	}
 	
 	public String scrambleWord() {
@@ -39,5 +42,10 @@ public class Hangman extends ConsoleProgram {
 			result += "-";
 		}
 		return result;
+	}
+	
+	public void printWelcomeMessage() {
+		println("Welcome to Hangman!");
+		println("The hiddenword is " + wordLength + " letters long.");
 	}
 }
