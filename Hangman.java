@@ -13,11 +13,11 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
-	private HangmanLexicon words = new HangmanLexicon();
-
-	private HangmanCanvas canvas = new HangmanCanvas();
-
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+//	private HangmanLexicon words = new HangmanLexicon();
+//
+//	private HangmanCanvas canvas = new HangmanCanvas();
+//
+//	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	/** Tracks the number of guesses the player has */
 	private int guessCounter = 8;
