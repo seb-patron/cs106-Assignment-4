@@ -55,6 +55,8 @@ public class Hangman extends ConsoleProgram {
 			while (guessCounter > 0) {
 				println("You have " + guessCounter + " guesses left.");
 				String guess = readLine("Enter a letter: ");
+				
+				guessCounter--;
 			}
 	}
 }
