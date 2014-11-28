@@ -64,8 +64,8 @@ public class Hangman extends ConsoleProgram {
 				char ch = getChar.charAt(0);
 				ch = Character.toUpperCase(ch);
 				for (int i = 0; i< hiddenWord.length(); i++) {
-					String ravioli = hiddenWord;
-					if (ch == ravioli.charAt(i)) {
+//					String ravioli = hiddenWord;
+					if (ch == hiddenWord.charAt(i)) {
 						println("MotherFucker!");
 						
 						
