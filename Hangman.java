@@ -63,7 +63,7 @@ public class Hangman extends ConsoleProgram {
 				String getChar = readLine("Enter a letter: ");
 				char ch = getChar.charAt(0);
 				for (int i = 0; i< hiddenWord.length(); i++) {
-					String ravioli = (hiddenWord);
+					String ravioli = hiddenWord;
 					if (ch == ravioli.charAt(i)) {
 						println("MotherFucker!");
 						
