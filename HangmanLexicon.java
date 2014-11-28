@@ -30,6 +30,7 @@ public class HangmanLexicon {
 			case 8: return "SLITHER";
 			case 9: return "ZIRCON";
 			default: throw new ErrorException("getWord: Illegal index");
+			return index;
 		}
 	};
 }
