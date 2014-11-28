@@ -23,7 +23,7 @@ public class Hangman extends ConsoleProgram {
 	
 	private String hiddenWord = pickWord();
 	
-	private String word = scrambleWord();
+	private String word;
 
 	public void run() {
 		setUpGame();
