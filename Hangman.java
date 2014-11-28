@@ -25,6 +25,8 @@ public class Hangman extends ConsoleProgram {
 
 
 	public void run() {
+		int index = 5;
+		println(words.getWord(index));
 		
 
 	}
