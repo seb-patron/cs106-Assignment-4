@@ -99,6 +99,7 @@ public class Hangman extends ConsoleProgram {
 		while (getChar.length() > 1) {
 			println("You may only enter one letter at a time.");
 			getChar = readLine("Enter a letter: ");
+			if (getChar.length() > 1) break;
 		}
 		return getChar;
 	}
