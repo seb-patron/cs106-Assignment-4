@@ -37,7 +37,7 @@ public class Hangman extends ConsoleProgram {
 		printWelcomeMessage();
 	}
 	
-	private String pickWord() {
+	public String pickWord() {
 		int index = rgen.nextInt(0,9);
 		String result = hangmanWords.getWord(index);
 		return result;
