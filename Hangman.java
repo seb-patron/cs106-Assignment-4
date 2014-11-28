@@ -101,7 +101,7 @@ public class Hangman extends ConsoleProgram {
 		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0))) {
 			println("You may only enter one, valid letter at a time.");
 			getChar = readLine("Enter a letter: ");
-			if (getChar.length() > 1 && Character.isLetter(getChar.charAt(0))) break;
+			if (getChar.length() < 1 && Character.isLetter(getChar.charAt(0))) break;
 		}
 		return getChar;
 	}
