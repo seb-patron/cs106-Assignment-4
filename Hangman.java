@@ -13,6 +13,10 @@ import java.awt.*;
 
 public class Hangman extends ConsoleProgram {
 
+	canvas = new HangmanCanvas();
+	add(canvas);
+}
+
     public void run() {
 		/* You fill this in */
 	}
