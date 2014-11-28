@@ -59,13 +59,11 @@ public class Hangman extends ConsoleProgram {
 
 	public void playGame() {
 		while (guessCounter > 0) {
-			getCharacter();
-
-			ch = Character.toUpperCase(ch);
+		char ch = getCharacter();
 			for (int i = 0; i< hiddenWord.length(); i++) {
 				if (ch == hiddenWord.charAt(i)) {
 					println("MotherFucker!");
-					word = ch;
+				//	word = ch;
 					println(word);
 				}
 			}
@@ -83,6 +81,9 @@ public class Hangman extends ConsoleProgram {
 		String getChar = readLine("Enter a letter: ");
 		checkInput(getChar);
 		char ch = getChar.charAt(0);
+		if (Character.isLowerCase(ch)) {
+			ch = Character.toUpperCase(ch);
+		}
 		return ch;
 	}
 	
