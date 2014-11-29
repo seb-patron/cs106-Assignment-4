@@ -15,11 +15,7 @@ public class HangmanLexicon {
 
 	private int wordCount = 0;
 
-	private int MAX_SIZE = 500;
 
-	//public String line;
-
-//	String [] wordList = new String [MAX_SIZE];
 	private ArrayList <String> wordList = new ArrayList <String> ();
 
 	public HangmanLexicon() {
@@ -29,7 +25,6 @@ public class HangmanLexicon {
 			while (true) {
 				String line = rd.readLine();
 				if (line == null) break; //breaks when lines all read
-				//wordList[wordCount++] = line;
 				wordList.add(line);
 				wordCount++;
 			}
@@ -44,12 +39,15 @@ public class HangmanLexicon {
 	}
 
 	public String getWord(int index) {
-		//	openFile();
 		int x = rgen.nextInt(0, wordCount);
 		return wordList.get(x);
 
 	}
 }
+
+/*
+ * Attempt to create class that would open file and add to array
+ */
 	//	private BufferedReader openFile() {
 	//		BufferedReader rd = null;
 	//		

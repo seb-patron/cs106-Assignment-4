@@ -19,8 +19,7 @@ public class HangmanCanvas extends GCanvas {
 
 	//Draws cnavas and sets up hangman
 	public void drawCanvas() {
-		canvas = new GCanvas();
-		add(canvas);
+		drawHead();
 //		canvas.add(head);
 	}
 	
