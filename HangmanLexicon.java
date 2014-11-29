@@ -46,9 +46,8 @@ public class HangmanLexicon {
 	public String getWord(int index) {
 		//	openFile();
 		int x = rgen.nextInt(0, wordCount);
-		String result = wordList[x];
+		return wordList.get(x);
 
-		return result;
 	}
 }
 	//	private BufferedReader openFile() {
