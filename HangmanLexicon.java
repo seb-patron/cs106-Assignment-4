@@ -13,9 +13,9 @@ public class HangmanLexicon {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
 	private int wordCount = 0;
-	
+
 	private int MAX_SIZE = 500;
-	
+
 	//public String line;
 
 	String [] wordList = new String [MAX_SIZE];
@@ -29,27 +29,29 @@ public class HangmanLexicon {
 		openFile();
 		int x = rgen.nextInt(0, wordCount);
 		String result = wordList[x];
-		
+
 		return result;
 	}
 
 	private BufferedReader openFile() {
-		BufferedReader rd = null;
-		
-		while (rd == null) {
+		//BufferedReader rd = null;
+
+		//while (rd == null) {
+		while(true){
 			try {
-				rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
+				BufferedReader rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 				while (true) {
 					String line = rd.readLine();
-					wordList[wordCount++] = line;
 					if (line == null) break; //breaks when lines all read
-				
+					wordList[wordCount++] = line;
 				}
 			} catch (IOException ex) {
-			//	println("Bad file");
+				//	println("Bad file");
 			}
+			//}
+			//return rd;
 		}
-		return rd;
+	//	return null;
 	}
 }
 
