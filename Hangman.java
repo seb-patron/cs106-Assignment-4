@@ -87,6 +87,8 @@ public class Hangman extends ConsoleProgram {
 			if (guessCounter == 0 ) {
 				println("Oh no! D:");
 				println("They hanged him!");
+				println();
+				println("The word was " + hiddenWord + ".");
 				break;
 			}
 			if (word.indexOf("-") == -1 && guessCounter > 0) {
