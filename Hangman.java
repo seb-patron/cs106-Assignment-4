@@ -17,6 +17,7 @@ public class Hangman extends ConsoleProgram {
 	private HangmanLexicon hangmanWords = new HangmanLexicon();
 	
 	private HangmanCanvas canvas;
+	
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -31,11 +32,12 @@ public class Hangman extends ConsoleProgram {
 	
 	public char ch;
 
-//	public void init() {
-//		canvas = new HangmanCanvas();
-//		 add(canvas);
-//	}
-//	
+	public void init() {
+		canvas = new HangmanCanvas();
+		add(canvas);
+		HangmanCanvas.drawHead();
+	}
+	
 	public void run() {
 		setUpGame();
 		playGame();

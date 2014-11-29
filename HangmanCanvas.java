@@ -22,6 +22,12 @@ public class HangmanCanvas extends GCanvas {
 		canvas = new GCanvas();
 		add(canvas);
 	}
+	
+	public void drawHead() {
+		head = new GOval(20, 20,50, 50 );
+		head.setFilled(true);
+		add (head);
+	}
 
 	/**
 	 * Updates the word on the screen to correspond to the current
@@ -58,11 +64,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 
-	public void drawHead() {
-		head = new GOval(20, 20,50, 50 );
-		head.setFilled(true);
-		add (head);
-	}
+
 
 
 	/* Constants for the simple version of the picture (in pixels) */
