@@ -58,17 +58,18 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	public void playGame() {
+		String displayWord = word;
 		while (guessCounter > 0) {
 		printGameStatus();
 		char ch = getCharacter();
 			for (int i = 0; i< hiddenWord.length(); i++) {
 				if (ch == hiddenWord.charAt(i)) {
 					println("MotherFucker!");
-					word = word.substring(0, i);
-					word += word.substring(i);
+					displayWord = displayWord.substring(0, i);
+					displayWord += displayWord.substring(i);
 					
 					
-					println(word);
+					println(displayWord);
 				}
 			}
 
