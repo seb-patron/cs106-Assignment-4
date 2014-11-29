@@ -67,9 +67,9 @@ public class Hangman extends ConsoleProgram {
 	 */
 	public String scrambleWord() {
 		String result = "";
-		for (int i = 0; i < hiddenWord.length(); i++) {
-			result += "-";
-		}
+//		for (int i = 0; i < hiddenWord.length(); i++) {
+//			result += "-";
+//		}
 		return result;
 	}
 
