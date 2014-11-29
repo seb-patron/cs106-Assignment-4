@@ -8,8 +8,8 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 	
-	public static final int APPLICATION_WIDTH = 400;
-	public static final int APPLICATION_HEIGHT = 600;
+//	public static final int APPLICATION_WIDTH = 400;
+//	public static final int APPLICATION_HEIGHT = 600;
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
