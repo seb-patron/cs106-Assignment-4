@@ -23,7 +23,7 @@ public class Hangman extends ConsoleProgram {
 
 	private String hiddenWord = pickWord();
 
-	public String word = scrambleWord();
+	//public String word = scrambleWord();
 
 	public void run() {
 		setUpGame();
@@ -33,7 +33,7 @@ public class Hangman extends ConsoleProgram {
 	public void setUpGame() {
 		pickWord();
 		println(hiddenWord);
-		println(word);
+		//println(word);
 		printWelcomeMessage();
 	}
 
@@ -58,19 +58,20 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	public void playGame() {
-		String displayWord = word;
+		String word = scrambleWord();
+		//String displayWord = word;
 		while (guessCounter > 0) {
 			printGameStatus();
 			char ch = getCharacter();
-			word  = checkLetter(ch);
-			println();
+			word  = checkLetter(ch , word);
+			println(word);
 			guessCounter--;
 		}
 	}
 
 	public void printGameStatus() {
 		println("You have " + guessCounter + " guesses left.");
-		println("The word looks like this " + word);
+	//	println("The word looks like this " + word);
 	}
 
 	public char getCharacter() {
@@ -101,7 +102,7 @@ public class Hangman extends ConsoleProgram {
 		return getChar;
 	}
 
-	public String checkLetter(char ch) {
+	public String checkLetter(char ch, String word) {
 		String result = null;
 		for (int i = 0; i< hiddenWord.length(); i++) {
 			if (ch == hiddenWord.charAt(i)) {
