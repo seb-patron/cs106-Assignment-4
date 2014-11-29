@@ -17,7 +17,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 	public void drawCanvas() {
-		GCanvas canvas = new GCanvas();
+//		GCanvas canvas = new GCanvas();
 	}
 
 	/**
