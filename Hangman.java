@@ -60,10 +60,10 @@ public class Hangman extends ConsoleProgram {
 	public void playGame() {
 		String displayWord = word;
 		while (guessCounter > 0) {
-		printGameStatus();
-		char ch = getCharacter();
-		word = checkLetter(ch);
-		println(word);
+			printGameStatus();
+			char ch = getCharacter();
+			word = checkLetter(ch);
+			println(word);
 			guessCounter--;
 		}
 	}
@@ -82,7 +82,7 @@ public class Hangman extends ConsoleProgram {
 		}
 		return ch;
 	}
-	
+
 
 	/*
 	 * Checks to make sure that input is valid. Valid Input is input that is only
@@ -100,7 +100,7 @@ public class Hangman extends ConsoleProgram {
 		}
 		return getChar;
 	}
-	
+
 	private String checkLetter(char ch) {
 		String result;
 		for (int i = 0; i< hiddenWord.length(); i++) {
@@ -108,12 +108,8 @@ public class Hangman extends ConsoleProgram {
 				println("MotherFucker!");
 				result = word.substring(0, i);
 				result += word.substring(i);
-				
-				
-				;
 			}
 		}
+		return result;
 	}
-	
-
 }
