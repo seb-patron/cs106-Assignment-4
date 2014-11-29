@@ -76,6 +76,14 @@ public class Hangman extends ConsoleProgram {
 			char ch = getCharacter();
 			checkLetter(ch);
 			println();
+			if (guessCounter == 0 ) {
+				println("They hanged him!");
+				break;
+			}
+			if (word.indexOf("-") == -1 && guessCounter > 0) {
+				println("You saved the good man from hanging!");
+				break;
+			}
 		}
 	}
 
@@ -127,13 +135,11 @@ public class Hangman extends ConsoleProgram {
 	 */
 	public void checkLetter(char ch) {
 		for (int i = 0; i< hiddenWord.length(); i++) {
-			
 			if (ch == hiddenWord.charAt(i)) {
 				println("MotherFucker!");
 				word = word.substring(0, i) + ch + word.substring(i + 1);
 			}
 		}
-		
 		//if letter is not in word tells user of incorrect guess
 		//and deincrements guess counter
 		if (word.indexOf(ch) == -1){
