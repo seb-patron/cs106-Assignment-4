@@ -100,6 +100,10 @@ public class Hangman extends ConsoleProgram {
 		return getChar;
 	}
 
+	/*
+	 * Checks to see if letter ch is in string hiddenword.
+	 * If so, replaces "-" with ch at location.
+	 */
 	public String checkLetter(char ch) {
 		String result = null;
 		for (int i = 0; i< hiddenWord.length(); i++) {
