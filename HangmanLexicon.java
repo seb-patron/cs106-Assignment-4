@@ -41,8 +41,9 @@ public class HangmanLexicon {
 				rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 				while (true) {
 					String line = rd.readLine();
-					if (line == null) break; //breaks when lines all read
 					wordList[wordCount++] = line;
+					if (line == null) break; //breaks when lines all read
+				
 				}
 			} catch (IOException ex) {
 			//	println("Bad file");
