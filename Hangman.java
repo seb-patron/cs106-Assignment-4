@@ -134,7 +134,10 @@ public class Hangman extends ConsoleProgram {
 			}
 		}
 		
+		//if letter is not in word tells user of incorrect guess
+		//and deincrements guess counter
 		if (word.indexOf(ch) == -1){
+			println("Sorry, but there are no " + ch + "'s in the word.");
 			guessCounter--;
 		}
 	}
