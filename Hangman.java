@@ -102,7 +102,7 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	private String checkLetter(char ch) {
-		String result;
+		String result = null;
 		for (int i = 0; i< hiddenWord.length(); i++) {
 			if (ch == hiddenWord.charAt(i)) {
 				println("MotherFucker!");
@@ -110,6 +110,7 @@ public class Hangman extends ConsoleProgram {
 				result += word.substring(i);
 			}
 		}
+
 		return result;
 	}
 }
