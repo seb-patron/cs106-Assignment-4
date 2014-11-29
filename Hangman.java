@@ -28,6 +28,8 @@ public class Hangman extends ConsoleProgram {
 	
 	/*scrambled version of hidden word that is deciphered in game*/
 	public String word = scrambleWord();
+	
+	public char ch;
 
 	public void init() {
 		canvas = new HangmanCanvas();
@@ -39,7 +41,7 @@ public class Hangman extends ConsoleProgram {
 		playGame();
 	}
 
-	/*
+	/**
 	 * Sets up game by picking a random word and displaying welcome message
 	 */
 	public void setUpGame() {
@@ -49,7 +51,8 @@ public class Hangman extends ConsoleProgram {
 		printWelcomeMessage();
 	}
 
-	/*Random generator that picks a word from HangmanLexicon Class
+	/**
+	 * Random generator that picks a word from HangmanLexicon Class
 	 * 
 	 */
 	private String pickWord() {
@@ -58,7 +61,7 @@ public class Hangman extends ConsoleProgram {
 		return result;
 	}
 
-	/*
+	/**
 	 * Scrambles word so that it appears as "------"
 	 */
 	public String scrambleWord() {
@@ -78,7 +81,7 @@ public class Hangman extends ConsoleProgram {
 	public void playGame() {
 		while (guessCounter > 0) {
 			printGameStatus();
-			char ch = getCharacter();
+			ch = getCharacter();
 			checkLetter(ch);
 			println();
 			if (guessCounter == 0 ) {
@@ -94,7 +97,7 @@ public class Hangman extends ConsoleProgram {
 		}
 	}
 
-	/*
+	/**
 	 * Prints number of guesses left and status of word
 	 */
 	public void printGameStatus() {
@@ -102,7 +105,7 @@ public class Hangman extends ConsoleProgram {
 		println("The word looks like this " + word);
 	}
 
-	/*
+	/**
 	 * Gets input from user. Input comes in as a string. It is then
 	 * Converted into a char. The Char is checked to make sure it is
 	 * not a digit and that it consists of only one character. Finally,
@@ -119,7 +122,7 @@ public class Hangman extends ConsoleProgram {
 	}
 
 
-	/*
+	/**
 	 * Checks to make sure that input is valid. Valid Input is input that is only
 	 * one character long and is a letter, not a digit. 
 	 * 
@@ -136,7 +139,7 @@ public class Hangman extends ConsoleProgram {
 		return getChar;
 	}
 
-	/*
+	/**
 	 * Checks to see if letter ch is in string hiddenword.
 	 * If so, replaces "-" with ch at location.
 	 */
@@ -152,6 +155,8 @@ public class Hangman extends ConsoleProgram {
 		if (word.indexOf(ch) == -1){
 			println("Sorry, but there are no " + ch + "'s in the word.");
 			guessCounter--;
+			HangmanCanvas.noteIncorrectGuess(guessCounter);
+			
 		}
 	}
 }

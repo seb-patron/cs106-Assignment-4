@@ -7,7 +7,7 @@
 import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
-	
+
 
 
 	/** Resets the display so that only the scaffold appears */
@@ -15,6 +15,7 @@ public class HangmanCanvas extends GCanvas {
 		drawCanvas();
 	}
 
+	//Draws cnavas and sets up hangman
 	public void drawCanvas() {
 		GCanvas faggot = new GCanvas();
 	}
@@ -35,21 +36,37 @@ public class HangmanCanvas extends GCanvas {
 	 * on the scaffold and adds the letter to the list of incorrect
 	 * guesses that appears at the bottom of the window.
 	 */
-	public void noteIncorrectGuess(char letter) {
-		/* You fill this in */
+	public void noteIncorrectGuess(int guessCounter) {
+		switch (guessCounter) {
+		case 7: drawHead();
+		case 6: drawBody();
+		case 5: drawRightArm();
+		case 4: drawLeftArm();
+		case 3: drawRightLeg();
+		case 2: drawLeftLeg();
+		case 1: drawRightFoot();
+		case 0: drawLeftFoot();
+
+		}
+		
+		public void drawHead() {
+			GOval head = new GOval(20, 20,HEAD_RADIUS, HEAD_RADIUS );
+			head.setFilled(false);
+			add(head);
+		}
+
+
+		/* Constants for the simple version of the picture (in pixels) */
+		private static final int SCAFFOLD_HEIGHT = 360;
+		private static final int BEAM_LENGTH = 144;
+		private static final int ROPE_LENGTH = 18;
+		private static final int HEAD_RADIUS = 36;
+		private static final int BODY_LENGTH = 144;
+		private static final int ARM_OFFSET_FROM_HEAD = 28;
+		private static final int UPPER_ARM_LENGTH = 72;
+		private static final int LOWER_ARM_LENGTH = 44;
+		private static final int HIP_WIDTH = 36;
+		private static final int LEG_LENGTH = 108;
+		private static final int FOOT_LENGTH = 28;
+
 	}
-
-	/* Constants for the simple version of the picture (in pixels) */
-	private static final int SCAFFOLD_HEIGHT = 360;
-	private static final int BEAM_LENGTH = 144;
-	private static final int ROPE_LENGTH = 18;
-	private static final int HEAD_RADIUS = 36;
-	private static final int BODY_LENGTH = 144;
-	private static final int ARM_OFFSET_FROM_HEAD = 28;
-	private static final int UPPER_ARM_LENGTH = 72;
-	private static final int LOWER_ARM_LENGTH = 44;
-	private static final int HIP_WIDTH = 36;
-	private static final int LEG_LENGTH = 108;
-	private static final int FOOT_LENGTH = 28;
-
-}
