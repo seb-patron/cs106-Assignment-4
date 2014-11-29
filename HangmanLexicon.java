@@ -40,13 +40,13 @@ public class HangmanLexicon {
 	}
 
 	public String getWord(int index) {
-		openFile();
+		//	openFile();
 		int x = rgen.nextInt(0, wordCount);
 		String result = wordList[x];
 
 		return result;
 	}
-
+}
 	//	private BufferedReader openFile() {
 	//		BufferedReader rd = null;
 	//		
