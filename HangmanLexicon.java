@@ -35,16 +35,14 @@ public class HangmanLexicon {
 
 	private BufferedReader openFile() {
 		BufferedReader rd = null;
-		int i = 0;
+		
 		while (rd == null) {
 			try {
 				rd = new BufferedReader(new FileReader("HangmanLexicon.txt"));
 				while (true) {
 					String line = rd.readLine();
 					if (line == null) break; //breaks when lines all read
-					wordList[i] = line;
-					i++;
-					wordCount++;
+					wordList[wordCount++] = line;
 				}
 			} catch (IOException ex) {
 			//	println("Bad file");
