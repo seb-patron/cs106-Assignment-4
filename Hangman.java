@@ -77,10 +77,12 @@ public class Hangman extends ConsoleProgram {
 			checkLetter(ch);
 			println();
 			if (guessCounter == 0 ) {
+				println("Oh no! D:");
 				println("They hanged him!");
 				break;
 			}
 			if (word.indexOf("-") == -1 && guessCounter > 0) {
+				println("Whoo-ho!");
 				println("You saved the good man from hanging!");
 				break;
 			}
