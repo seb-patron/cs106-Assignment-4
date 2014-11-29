@@ -15,6 +15,8 @@ import java.io.IOException;
 public class Hangman extends ConsoleProgram {
 
 	private HangmanLexicon hangmanWords = new HangmanLexicon();
+	
+	private HangmanCanvas canvas;
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -28,7 +30,8 @@ public class Hangman extends ConsoleProgram {
 	public String word = scrambleWord();
 
 	public void init() {
-		HangmanCanvas canvas = new HangmanCanvas();
+		canvas = new HangmanCanvas();
+		 add(canvas);
 	}
 	
 	public void run() {
