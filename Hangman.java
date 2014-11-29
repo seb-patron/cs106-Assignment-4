@@ -30,6 +30,9 @@ public class Hangman extends ConsoleProgram {
 		playGame();
 	}
 
+	/*
+	 * Sets up game by picking a random word and displaying welcome message
+	 */
 	public void setUpGame() {
 		pickWord();
 		println(hiddenWord);
@@ -37,12 +40,18 @@ public class Hangman extends ConsoleProgram {
 		printWelcomeMessage();
 	}
 
+	/*Random generator that picks a word from HangmanLexicon Class
+	 * 
+	 */
 	private String pickWord() {
 		int index = rgen.nextInt(0,9);
 		String result = hangmanWords.getWord(index);
 		return result;
 	}
 
+	/*
+	 * Scrambles word so that it appears as "------"
+	 */
 	public String scrambleWord() {
 		String result = "";
 		for (int i = 0; i < hiddenWord.length(); i++) {
@@ -66,6 +75,9 @@ public class Hangman extends ConsoleProgram {
 		}
 	}
 
+	/*
+	 * Prints number of guesses left and status of word
+	 */
 	public void printGameStatus() {
 		println("You have " + guessCounter + " guesses left.");
 		println("The word looks like this " + word);
@@ -94,14 +106,14 @@ public class Hangman extends ConsoleProgram {
 	 * 
 	 * 1st part of while statement evaluates to see if string is longer than one 
 	 * letter, second part check if it is a digit. Breaks when both conditions
-	 * are satisified
+	 * are satisfied
 	 */
 	public String checkInput(String getChar) {
 		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0))) {
 			println("You may only enter one, valid letter at a time.");
 			getChar = readLine("Enter a letter: ");
 			if (getChar.length() < 1 && Character.isLetter(getChar.charAt(0))) break;
-		}
+		} //breaks only if char is 1 in length and not a digit
 		return getChar;
 	}
 
@@ -110,14 +122,11 @@ public class Hangman extends ConsoleProgram {
 	 * If so, replaces "-" with ch at location.
 	 */
 	public void checkLetter(char ch) {
-	//	String result = null;
 		for (int i = 0; i< hiddenWord.length(); i++) {
 			if (ch == hiddenWord.charAt(i)) {
 				println("MotherFucker!");
 				word = word.substring(0, i) + ch + word.substring(i + 1);
 			}
 		}
-
-	//	return result;
 	}
 }
