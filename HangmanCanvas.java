@@ -36,7 +36,7 @@ public class HangmanCanvas extends GCanvas {
 	 * on the scaffold and adds the letter to the list of incorrect
 	 * guesses that appears at the bottom of the window.
 	 */
-	public void noteIncorrectGuess(int guessCounter) {
+	public static void noteIncorrectGuess(int guessCounter) {
 		switch (guessCounter) {
 		case 7: drawHead();
 		case 6: drawBody();
