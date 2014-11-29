@@ -7,7 +7,6 @@
 
 import acm.util.*;
 import java.io.*;
-import java.util.*;
 
 public class HangmanLexicon {
 
@@ -27,9 +26,10 @@ public class HangmanLexicon {
 	}
 
 	public String getWord(int index) {
-		//String result;
-		//int x = rgen.nextInt(0, wordCount);
-		String result = wordList[index];
+		openFile();
+		int x = rgen.nextInt(0, wordCount);
+		String result = wordList[x];
+		
 		return result;
 	}
 
@@ -82,4 +82,4 @@ public class HangmanLexicon {
 //		case 9: return "ZIRCON";
 //		default: throw new ErrorException("getWord: Illegal index");
 //	}
-//}
+//};
