@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
 	private String hiddenWord = pickWord();
 	
 	/*scrambled version of hidden word that is deciphered in game*/
-	public String word = hiddenWord();
+	public String word = hiddenWord;
 	
 	public char ch;
 
@@ -65,13 +65,13 @@ public class Hangman extends ConsoleProgram {
 	/**
 	 * Scrambles word so that it appears as "------"
 	 */
-	public String scrambleWord() {
+//	public String scrambleWord() {
 //		String result = "";
 //		for (int i = 0; i < hiddenWord.length(); i++) {
 //			result += "-";
 //		}
 //		return result;
-	}
+//	}
 
 	public void printWelcomeMessage() {
 		int wordLength = hiddenWord.length();
