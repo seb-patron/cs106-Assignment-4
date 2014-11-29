@@ -63,7 +63,6 @@ public class Hangman extends ConsoleProgram {
 			char ch = getCharacter();
 			checkLetter(ch);
 			println();
-			guessCounter--;
 		}
 	}
 
@@ -72,6 +71,12 @@ public class Hangman extends ConsoleProgram {
 		println("The word looks like this " + word);
 	}
 
+	/*
+	 * Gets input from user. Input comes in as a string. It is then
+	 * Converted into a char. The Char is checked to make sure it is
+	 * not a digit and that it consists of only one character. Finally,
+	 * It is converted to uppercase if input is lowercase.
+	 */
 	public char getCharacter() {
 		String getChar = readLine("Enter a letter: ");
 		checkInput(getChar);
@@ -104,8 +109,8 @@ public class Hangman extends ConsoleProgram {
 	 * Checks to see if letter ch is in string hiddenword.
 	 * If so, replaces "-" with ch at location.
 	 */
-	public String checkLetter(char ch) {
-		String result = null;
+	public void checkLetter(char ch) {
+	//	String result = null;
 		for (int i = 0; i< hiddenWord.length(); i++) {
 			if (ch == hiddenWord.charAt(i)) {
 				println("MotherFucker!");
@@ -113,6 +118,6 @@ public class Hangman extends ConsoleProgram {
 			}
 		}
 
-		return result;
+	//	return result;
 	}
 }
