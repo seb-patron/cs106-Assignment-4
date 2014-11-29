@@ -27,7 +27,7 @@ public class HangmanCanvas extends GCanvas {
 	public void drawHead() {
 		head = new GOval(20, 20,50, 50 );
 		head.setFilled(true);
-	//	add(head);
+		add(head);
 	}
 
 	/**
