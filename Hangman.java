@@ -31,12 +31,14 @@ public class Hangman extends ConsoleProgram {
 	
 	public char ch;
 
-	public void init() {
-		canvas = new HangmanCanvas();
-		 add(canvas);
-	}
-	
+//	public void init() {
+//		canvas = new HangmanCanvas();
+//		 add(canvas);
+//	}
+//	
 	public void run() {
+		canvas = new HangmanCanvas();
+		add(canvas);
 		setUpGame();
 		playGame();
 	}
