@@ -8,17 +8,19 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 
-	private static GOval head;
+	private GOval head;
+	
+	public GCanvas canvas;
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
-		drawCanvas();
+		canvas.reset();
 	}
 
 	//Draws cnavas and sets up hangman
 	public void drawCanvas() {
-		GCanvas faggot = new GCanvas();
-		add(faggot);
+		canvas = new GCanvas();
+		add(canvas);
 	}
 
 	/**
@@ -39,9 +41,7 @@ public class HangmanCanvas extends GCanvas {
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
 		if(guessCounter == 7) {
-			GOval fagoot = new GOval(20, 20,50, 50 );
-			fagoot.setFilled(true);
-			add(fagoot);
+			drawHead();
 		}
 		switch (guessCounter) {
 //		case 7: drawHead();
@@ -56,11 +56,11 @@ public class HangmanCanvas extends GCanvas {
 		}
 
 	}
-//	public void drawHead() {
-//		head = new GOval(20, 20,50, 50 );
-//		head.setFilled(true);
-//		add (head);
-//	}
+	public void drawHead() {
+		head = new GOval(20, 20,50, 50 );
+		head.setFilled(true);
+		add (head);
+	}
 
 
 	/* Constants for the simple version of the picture (in pixels) */
