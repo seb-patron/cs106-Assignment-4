@@ -9,7 +9,7 @@ import acm.graphics.*;
 public class HangmanCanvas extends GCanvas {
 
 	private GOval head;
-	
+
 	public GCanvas canvas;
 
 	/** Resets the display so that only the scaffold appears */
@@ -40,22 +40,24 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
-		if(guessCounter == 7) {
-			drawHead();
-		}
-		switch (guessCounter) {
-//		case 7: drawHead();
-		case 6: drawBody();
-		case 5: drawRightArm();
-		case 4: drawLeftArm();
-		case 3: drawRightLeg();
-		case 2: drawLeftLeg();
-		case 1: drawRightFoot();
-		case 0: drawLeftFoot();
-
-		}
+		//		if(guessCounter == 7) {
+		//			drawHead();
+		//		}
+		//		switch (guessCounter) {
+		////		case 7: drawHead();
+		//		case 6: drawBody();
+		//		case 5: drawRightArm();
+		//		case 4: drawLeftArm();
+		//		case 3: drawRightLeg();
+		//		case 2: drawLeftLeg();
+		//		case 1: drawRightFoot();
+		//		case 0: drawLeftFoot();
+		//
+		//		}
 
 	}
+
+
 	public void drawHead() {
 		head = new GOval(20, 20,50, 50 );
 		head.setFilled(true);

@@ -32,7 +32,6 @@ public class Hangman extends ConsoleProgram {
 	public char ch;
 
 	public void init() {
-		canvas.reset();
 		canvas = new HangmanCanvas();
 		 add(canvas);
 	}
@@ -155,6 +154,7 @@ public class Hangman extends ConsoleProgram {
 		//and deincrements guess counter
 		if (word.indexOf(ch) == -1){
 			println("Sorry, but there are no " + ch + "'s in the word.");
+			HangmanCanvas.drawHead();
 			guessCounter--;
 			HangmanCanvas.noteIncorrectGuess(guessCounter);
 			
