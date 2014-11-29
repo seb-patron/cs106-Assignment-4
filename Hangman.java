@@ -62,17 +62,8 @@ public class Hangman extends ConsoleProgram {
 		while (guessCounter > 0) {
 		printGameStatus();
 		char ch = getCharacter();
-			for (int i = 0; i< hiddenWord.length(); i++) {
-				if (ch == hiddenWord.charAt(i)) {
-					println("MotherFucker!");
-					displayWord = displayWord.substring(0, i);
-					displayWord += displayWord.substring(i);
-					
-					
-					println(displayWord);
-				}
-			}
-
+		word = checkLetter(ch);
+		println(word);
 			guessCounter--;
 		}
 	}
@@ -108,6 +99,20 @@ public class Hangman extends ConsoleProgram {
 			if (getChar.length() < 1 && Character.isLetter(getChar.charAt(0))) break;
 		}
 		return getChar;
+	}
+	
+	private String checkLetter(char ch) {
+		String result;
+		for (int i = 0; i< hiddenWord.length(); i++) {
+			if (ch == hiddenWord.charAt(i)) {
+				println("MotherFucker!");
+				result = word.substring(0, i);
+				result += word.substring(i);
+				
+				
+				;
+			}
+		}
 	}
 	
 
