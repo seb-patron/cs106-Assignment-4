@@ -21,10 +21,14 @@ public class Hangman extends ConsoleProgram {
 	/** Tracks the number of guesses the player has */
 	private int guessCounter = 8;
 
+	/*is a random word*/
 	private String hiddenWord = pickWord();
-
+	
+	/*scrambled version of hidden word that is deciphered in game*/
 	public String word = scrambleWord();
 
+	
+	
 	public void run() {
 		setUpGame();
 		playGame();
@@ -123,10 +127,15 @@ public class Hangman extends ConsoleProgram {
 	 */
 	public void checkLetter(char ch) {
 		for (int i = 0; i< hiddenWord.length(); i++) {
+			
 			if (ch == hiddenWord.charAt(i)) {
 				println("MotherFucker!");
 				word = word.substring(0, i) + ch + word.substring(i + 1);
 			}
+		}
+		
+		if (word.indexOf(ch) == -1){
+			guessCounter--;
 		}
 	}
 }
