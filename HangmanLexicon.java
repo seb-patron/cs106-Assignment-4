@@ -26,13 +26,11 @@ public class HangmanLexicon {
 		return wordCount;
 	}
 
-	public String getWord() {
-		String result;
-		int x = rgen.nextInt(0, wordCount);
-		result = wordList[x];
+	public String getWord(int index) {
+		//String result;
+		//int x = rgen.nextInt(0, wordCount);
+		String result = wordList[index];
 		return result;
-		
-
 	}
 
 	private BufferedReader openFile() {
