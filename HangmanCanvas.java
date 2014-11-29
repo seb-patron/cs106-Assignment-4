@@ -8,7 +8,6 @@ import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
 
-	private GOval head;
 
 	public GCanvas canvas;
 
@@ -24,7 +23,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	public void drawHead() {
-		head = new GOval(40, 20,50, 50 );
+		GOval head = new GOval(40, 20,50, 50 );
 		head.setFilled(true);
 		add(head);
 	}
