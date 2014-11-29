@@ -7,32 +7,40 @@
 import acm.graphics.*;
 
 public class HangmanCanvas extends GCanvas {
-
-/** Resets the display so that only the scaffold appears */
-	public void reset() {
 	
+	public static final int APPLICATION_WIDTH = 400;
+	public static final int APPLICATION_HEIGHT = 600;
+
+	/** Resets the display so that only the scaffold appears */
+	public void reset() {
+		drawCanvas();
 	}
 
-/**
- * Updates the word on the screen to correspond to the current
- * state of the game.  The argument string shows what letters have
- * been guessed so far; unguessed letters are indicated by hyphens.
- */
+	public void drawCanvas() {
+		GCanvas canvas = new GCanvas();
+	}
+
+	/**
+	 * Updates the word on the screen to correspond to the current
+	 * state of the game.  The argument string shows what letters have
+	 * been guessed so far; unguessed letters are indicated by hyphens.
+	 */
 	public void displayWord(String word) {
 		/* You fill this in */
 	}
 
-/**
- * Updates the display to correspond to an incorrect guess by the
- * user.  Calling this method causes the next body part to appear
- * on the scaffold and adds the letter to the list of incorrect
- * guesses that appears at the bottom of the window.
- */
+
+	/**
+	 * Updates the display to correspond to an incorrect guess by the
+	 * user.  Calling this method causes the next body part to appear
+	 * on the scaffold and adds the letter to the list of incorrect
+	 * guesses that appears at the bottom of the window.
+	 */
 	public void noteIncorrectGuess(char letter) {
 		/* You fill this in */
 	}
 
-/* Constants for the simple version of the picture (in pixels) */
+	/* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
 	private static final int BEAM_LENGTH = 144;
 	private static final int ROPE_LENGTH = 18;
