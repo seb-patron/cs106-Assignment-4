@@ -62,8 +62,8 @@ public class Hangman extends ConsoleProgram {
 		while (guessCounter > 0) {
 			printGameStatus();
 			char ch = getCharacter();
-			word = checkLetter(ch);
-			println(word);
+			String TEMP_______TEST = checkLetter(ch);
+			println(TEMP_______TEST);
 			guessCounter--;
 		}
 	}
