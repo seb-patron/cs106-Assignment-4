@@ -21,10 +21,11 @@ public class HangmanCanvas extends GCanvas {
 	public void drawCanvas() {
 		canvas = new GCanvas();
 		add(canvas);
-		canvas.add(head);
+//		canvas.add(head);
 	}
 	
-	public void drawHead() {
+	public void add(GOval head) {
+//	public void drawHead() {
 		head = new GOval(40, 20,50, 50 );
 		head.setFilled(true);
 		add(head);
@@ -48,7 +49,7 @@ public class HangmanCanvas extends GCanvas {
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
 		//		if(guessCounter == 7) {
-		//			drawHead();
+		//			canvas.add(head);
 		//		}
 		//		switch (guessCounter) {
 		////		case 7: drawHead();
