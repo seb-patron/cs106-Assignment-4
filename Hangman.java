@@ -25,7 +25,7 @@ public class Hangman extends ConsoleProgram {
 	private int guessCounter = 8;
 
 	/*is a random word*/
-	private String hiddenWord = pickWord();
+	private String hiddenWord;
 	
 	/*scrambled version of hidden word that is deciphered in game*/
 	public String word = scrambleWord();
@@ -46,7 +46,7 @@ public class Hangman extends ConsoleProgram {
 	 * Sets up game by picking a random word and displaying welcome message
 	 */
 	public void setUpGame() {
-		pickWord();
+		hiddenWord = pickWord();
 		println(hiddenWord);
 		println(word);
 		printWelcomeMessage();
