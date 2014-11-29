@@ -7,6 +7,7 @@
 
 import acm.util.*;
 import java.io.*;
+import java.util.*;
 
 public class HangmanLexicon {
 
@@ -18,7 +19,8 @@ public class HangmanLexicon {
 
 	//public String line;
 
-	String [] wordList = new String [MAX_SIZE];
+//	String [] wordList = new String [MAX_SIZE];
+	private ArrayList <String> wordList = new ArrayList <String> ();
 
 	public HangmanLexicon() {
 		try {
@@ -27,7 +29,9 @@ public class HangmanLexicon {
 			while (true) {
 				String line = rd.readLine();
 				if (line == null) break; //breaks when lines all read
-				wordList[wordCount++] = line;
+				//wordList[wordCount++] = line;
+				wordList.add(line);
+				wordCount++;
 			}
 		} catch (IOException ex) {
 			//	println("Bad file");
