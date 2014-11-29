@@ -27,7 +27,9 @@ public class Hangman extends ConsoleProgram {
 	/*scrambled version of hidden word that is deciphered in game*/
 	public String word = scrambleWord();
 
-	
+	public void init() {
+		HangmanCanvas canvas = new HangmanCanvas();
+	}
 	
 	public void run() {
 		setUpGame();
