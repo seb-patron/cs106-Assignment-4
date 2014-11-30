@@ -7,8 +7,8 @@
 import acm.graphics.*;
 ;
 public class HangmanCanvas extends GCanvas {
-	
-	
+
+
 	/* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
 	private static final int BEAM_LENGTH = 144;
@@ -21,13 +21,13 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
-	
+
 	private int scaffoldXStart = 20;
 	private int scaffoldYStart = 20;
-	
+
 	private int endBeamxLocation = scaffoldXStart + BEAM_LENGTH;
 
-	
+
 	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
 
 
@@ -36,12 +36,12 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		drawScaffold();
 	}
-	
+
 	private void drawScaffold() {
 		GLine scaffold = new GLine(scaffoldXStart , scaffoldYStart , 
 				scaffoldXStart , scaffoldYStart + SCAFFOLD_HEIGHT );
 		add(scaffold);
-		
+
 		GLine beam = new GLine (scaffoldXStart, scaffoldYStart , 
 				endBeamxLocation , scaffoldYStart);
 		add(beam);
@@ -68,29 +68,36 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public  void noteIncorrectGuess(int guessCounter) {
-				switch (guessCounter) {
-				case 7: drawHead();
-//				case 6: drawBody();
-//				case 5: drawRightArm();
-//				case 4: drawLeftArm();
-//				case 3: drawRightLeg();
-//				case 2: drawLeftLeg();
-//				case 1: drawRightFoot();
-//				case 0: drawLeftFoot();
-		
-				}
+		switch (guessCounter) {
+		case 7: drawHead();
+		//				case 6: drawBody();
+		//				case 5: drawRightArm();
+		//				case 4: drawLeftArm();
+		//				case 3: drawRightLeg();
+		//				case 2: drawLeftLeg();
+		//				case 1: drawRightFoot();
+		//				case 0: drawLeftFoot();
+
+		}
 
 	}
 
 
 	private void drawHead() {
-		
-        double x = endBeamxLocation - HEAD_RADIUS;
-        double y =endRopeYLocation;
-        GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
-        add(head);
-    
-}
+
+		int x = endBeamxLocation - HEAD_RADIUS;
+		int y = endRopeYLocation;
+		GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
+		add(head);
+
+	}
+	
+	private void drawBody() {
+		int x = endBeamxLocation + HEAD_RADIUS;
+		int y = endRopeYLocation + HEAD_RADIUS;
+		GLine body = new GLine(x , y, x, y + BODY_LENGTH);
+		add(body);
+	}
 
 
 
