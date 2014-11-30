@@ -112,7 +112,7 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
 		GLine upperArm = new GLine(x , y, x - UPPER_ARM_LENGTH, y);
 		add(upperArm);
-		x += UPPER_ARM_LENGTH;
+		x -= UPPER_ARM_LENGTH;
 		y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
 		GLine lowerArm = new GLine(x , y, x, y + LOWER_ARM_LENGTH);
 		add(lowerArm);
