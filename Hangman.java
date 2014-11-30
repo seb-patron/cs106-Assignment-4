@@ -33,13 +33,13 @@ public class Hangman extends ConsoleProgram {
 	public char ch;
 
 	public void init() {
-		canvas = new HangmanCanvas();
-		add(canvas);
+//		canvas = new HangmanCanvas();
+//		add(canvas);
+		canvas.reset();
 	}
 	
 	public void run() {
 		setUpGame();
-		canvas.reset();
 		playGame();
 	}
 
