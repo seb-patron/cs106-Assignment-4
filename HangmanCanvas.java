@@ -68,8 +68,7 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public  void noteIncorrectGuess(int guessCounter) {
-		int i = guessCounter;
-		switch (i) {
+		switch (guessCounter) {
 		case 7: drawHead();
 		case 6: drawBody();
 		//				case 5: drawRightArm();
@@ -78,9 +77,10 @@ public class HangmanCanvas extends GCanvas {
 		//				case 2: drawLeftLeg();
 		//				case 1: drawRightFoot();
 		//				case 0: drawLeftFoot();
+			break;
+		default: break;
 
 		}
-
 	}
 
 
