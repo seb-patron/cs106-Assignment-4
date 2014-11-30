@@ -110,6 +110,7 @@ public class Hangman extends ConsoleProgram {
 	public void printGameStatus() {
 		println("You have " + guessCounter + " guesses left.");
 		println("The word looks like this " + word);
+		canvas.displayWord(word);
 	}
 
 	/**

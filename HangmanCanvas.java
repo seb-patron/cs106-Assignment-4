@@ -59,8 +59,17 @@ public class HangmanCanvas extends GCanvas {
 	 * state of the game.  The argument string shows what letters have
 	 * been guessed so far; unguessed letters are indicated by hyphens.
 	 */
+	
+	private GLabel wordLabel;
 	public void displayWord(String word) {
-		/* You fill this in */
+		int x = scaffoldXStart;
+		int y = 40 + SCAFFOLD_HEIGHT;
+		if (getElementAt(x, y) != null) {
+			remove(wordLabel);
+		}
+		wordLabel = new GLabel (word, x, y);
+		wordLabel.setFont(new Font("Serif", Font.BOLD, 25));
+		add (wordLabel);
 	}
 
 
@@ -94,7 +103,7 @@ public class HangmanCanvas extends GCanvas {
 			remove(guesses);
 		}
 		guesses = new GLabel (incorrectGuesses, x, y);
-		guesses.setFont(new Font("Serif", Font.BOLD, 25));
+		guesses.setFont(new Font("Serif", Font.BOLD, 15));
 		add (guesses);
 	}
 
