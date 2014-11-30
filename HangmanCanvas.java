@@ -7,8 +7,8 @@
 import acm.graphics.*;
 ;
 public class HangmanCanvas extends GCanvas {
-
-
+	
+	
 	/* Constants for the simple version of the picture (in pixels) */
 	private static final int SCAFFOLD_HEIGHT = 360;
 	private static final int BEAM_LENGTH = 144;
@@ -21,13 +21,13 @@ public class HangmanCanvas extends GCanvas {
 	private static final int HIP_WIDTH = 36;
 	private static final int LEG_LENGTH = 108;
 	private static final int FOOT_LENGTH = 28;
-
+	
 	private int scaffoldXStart = 20;
 	private int scaffoldYStart = 20;
-
+	
 	private int endBeamxLocation = scaffoldXStart + BEAM_LENGTH;
 
-
+	
 	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
 
 
@@ -35,13 +35,14 @@ public class HangmanCanvas extends GCanvas {
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
 		drawScaffold();
+		drawHead();
 	}
-
+	
 	private void drawScaffold() {
 		GLine scaffold = new GLine(scaffoldXStart , scaffoldYStart , 
 				scaffoldXStart , scaffoldYStart + SCAFFOLD_HEIGHT );
 		add(scaffold);
-
+		
 		GLine beam = new GLine (scaffoldXStart, scaffoldYStart , 
 				endBeamxLocation , scaffoldYStart);
 		add(beam);
@@ -50,6 +51,11 @@ public class HangmanCanvas extends GCanvas {
 		add(rope);
 	}
 
+	private void drawHead() {
+		GOval head = new GOval(getWidth()/2, getHeight()/2,500, 500 );
+		head.setFilled(true);
+		add(head);
+	}
 
 	/**
 	 * Updates the word on the screen to correspond to the current
@@ -68,28 +74,23 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
-		if(guessCounter == 7) {
-			drawHead();
-		}
-//		switch (guessCounter) {
-//		//		case 7: drawHead();
-//		case 6: drawBody();
-//		case 5: drawRightArm();
-//		case 4: drawLeftArm();
-//		case 3: drawRightLeg();
-//		case 2: drawLeftLeg();
-//		case 1: drawRightFoot();
-//		case 0: drawLeftFoot();
-//
-//		}
+		//		if(guessCounter == 7) {
+		//			canvas.add(head);
+		//		}
+		//		switch (guessCounter) {
+		////		case 7: drawHead();
+		//		case 6: drawBody();
+		//		case 5: drawRightArm();
+		//		case 4: drawLeftArm();
+		//		case 3: drawRightLeg();
+		//		case 2: drawLeftLeg();
+		//		case 1: drawRightFoot();
+		//		case 0: drawLeftFoot();
+		//
+		//		}
 
 	}
-	
-	private void drawHead() {
-		GOval head = new GOval(endBeamxLocation - HEAD_RADIUS, endRopeYLocation ,
-				HEAD_RADIUS*2, HEAD_RADIUS*2);
-		add(head);
-}
+
 
 
 
