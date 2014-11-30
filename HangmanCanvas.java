@@ -163,6 +163,12 @@ public class HangmanCanvas extends GCanvas {
 		head = new GImage("hungFace.gif");
 		add(head, x, y);
 	}
-
-
+	
+	public void drawHappyFace() {
+		int x = endBeamxLocation - HEAD_RADIUS;
+		int y = endRopeYLocation;
+		remove(head);
+		head = new GImage("happyFace.gif");
+		add(head, x, y);
+	}
 }
