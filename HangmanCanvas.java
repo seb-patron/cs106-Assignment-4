@@ -74,9 +74,7 @@ public class HangmanCanvas extends GCanvas {
 		if (guessCounter == 3) drawRightLeg();
 		if (guessCounter == 2) drawLeftLeg();
 		if (guessCounter == 1) drawRightFoot();
-//		if (guessCounter == 0) drawLeftFoot();
-
-		
+		if (guessCounter == 0) drawLeftFoot();		
 	}
 
 
@@ -144,6 +142,14 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH + LEG_LENGTH/2;
 		
 		GImage shoe = new GImage("rightShoe.gif");
+		add(shoe, x, y);
+	}
+	
+	private void drawLeftFoot() {
+		int x = endBeamxLocation - HIP_WIDTH/2;
+		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH + LEG_LENGTH/2;
+		
+		GImage shoe = new GImage("leftShoe.gif");
 		add(shoe, x, y);
 	}
 
