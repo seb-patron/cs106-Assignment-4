@@ -169,8 +169,9 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation;
 		if(head != null) {
 			remove(head);
+			head = new GImage("happyFace.gif");
+			add(head, x, y);
 		}
-		head = new GImage("happyFace.gif");
-		add(head, x, y);
+
 	}
 }
