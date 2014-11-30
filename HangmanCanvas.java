@@ -128,7 +128,16 @@ public class HangmanCanvas extends GCanvas {
 		add(leg);
 	}
 
-
+	private void drawLeftLeg() {
+		int x = endBeamxLocation;
+		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH;
+		GLine hip = new GLine(x , y, x - HIP_WIDTH, y);
+		add(hip);
+		
+		x -= HIP_WIDTH;
+		GLine leg = new GLine(x , y, x, y + LEG_LENGTH);
+		add(leg);
+	}
 
 
 }
