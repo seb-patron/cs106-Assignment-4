@@ -162,8 +162,8 @@ public class HangmanCanvas extends GCanvas {
 		if (getElementAt(x, y) !=null) {
 			remove(this);
 		}
-		GImage head = new GImage("hungFace.gif");
-		add(head, x, y);
+		//GImage head = new GImage("hungFace.gif");
+		//add(head, x, y);
 	}
 
 
