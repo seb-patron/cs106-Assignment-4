@@ -5,10 +5,8 @@
  */
 
 import acm.graphics.*;
-import acm.program.*;
-import acm.util.*;
 
-public class HangmanCanvas extends GraphicsProgram {
+public class HangmanCanvas extends GCanvas {
 
 
 	public GCanvas canvas;
