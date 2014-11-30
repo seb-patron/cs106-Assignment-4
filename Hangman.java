@@ -16,6 +16,8 @@ public class Hangman extends ConsoleProgram {
 
 	private HangmanLexicon hangmanWords = new HangmanLexicon();
 	
+	private HangmanCanvas fuckYou = new HangmanCanvas();
+	
 	private HangmanCanvas canvas;
 	
 
@@ -46,6 +48,7 @@ public class Hangman extends ConsoleProgram {
 	 * Sets up game by picking a random word and displaying welcome message
 	 */
 	public void setUpGame() {
+		fuckYou.drawHead();
 		pickWord();
 		println(hiddenWord);
 		println(word);
