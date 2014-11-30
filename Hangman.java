@@ -160,7 +160,7 @@ public class Hangman extends ConsoleProgram {
 		//and deincrements guess counter
 		if (word.indexOf(ch) == -1){
 			println("Sorry, but there are no " + ch + "'s in the word.");
-			guessCounter = 7;
+			guessCounter --;
 			canvas.noteIncorrectGuess(guessCounter);
 			
 		}
