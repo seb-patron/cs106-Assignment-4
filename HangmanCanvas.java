@@ -140,7 +140,7 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void drawRightFoot() {
-		int x = endBeamxLocation + HIP_WIDTH;
+		int x = endBeamxLocation + HIP_WIDTH/2;
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH + LEG_LENGTH;
 		
 		GImage shoe = new GImage("rightShoe.gif");
