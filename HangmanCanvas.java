@@ -68,19 +68,16 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public  void noteIncorrectGuess(int guessCounter) {
-		switch (guessCounter) {
-		case 7: drawHead();
-		case 6: drawBody();
-		//				case 5: drawRightArm();
-		//				case 4: drawLeftArm();
-		//				case 3: drawRightLeg();
-		//				case 2: drawLeftLeg();
-		//				case 1: drawRightFoot();
-		//				case 0: drawLeftFoot();
-			break;
-		default: break;
+		if (guessCounter == 7) drawHead();
+		if (guessCounter == 6) drawBody();
+//		if (guessCounter == 7) drawRightArm();
+//		if (guessCounter == 7) drawLeftArm();
+//		if (guessCounter == 7) drawRightLeg();
+//		if (guessCounter == 7) drawLeftLeg();
+//		if (guessCounter == 7) drawRightFoot();
+//		if (guessCounter == 7) drawLeftFoot();
 
-		}
+		
 	}
 
 
