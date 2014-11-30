@@ -81,8 +81,8 @@ public class HangmanCanvas extends GCanvas {
 	private void drawHead() {
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
-		GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
-		add(head);
+		GImage head = new GImage("face.gif");
+		add(head, x, y);
 	}
 
 	private void drawBody() {
