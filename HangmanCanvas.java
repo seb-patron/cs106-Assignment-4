@@ -79,7 +79,7 @@ public class HangmanCanvas extends GCanvas {
 			drawDeadHead();
 		}
 	}
-	
+
 	private GImage head;
 	private void drawHead() {
 		int x = endBeamxLocation - HEAD_RADIUS;
@@ -94,7 +94,7 @@ public class HangmanCanvas extends GCanvas {
 		GLine body = new GLine(x , y, x, y + BODY_LENGTH);
 		add(body);
 	}
-	
+
 	private void drawRightArm() {
 		int x = endBeamxLocation;
 		int y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
@@ -104,9 +104,9 @@ public class HangmanCanvas extends GCanvas {
 		y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
 		GLine lowerArm = new GLine(x , y, x, y + LOWER_ARM_LENGTH);
 		add(lowerArm);
-		
+
 	}
-	
+
 	private void drawLeftArm() {
 		int x = endBeamxLocation;
 		int y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
@@ -117,13 +117,13 @@ public class HangmanCanvas extends GCanvas {
 		GLine lowerArm = new GLine(x , y, x, y + LOWER_ARM_LENGTH);
 		add(lowerArm);	
 	}
-	
+
 	private void drawRightLeg() {
 		int x = endBeamxLocation;
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH;
 		GLine hip = new GLine(x , y, x + HIP_WIDTH, y);
 		add(hip);
-		
+
 		x += HIP_WIDTH;
 		GLine leg = new GLine(x , y, x, y + LEG_LENGTH);
 		add(leg);
@@ -134,28 +134,28 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH;
 		GLine hip = new GLine(x , y, x - HIP_WIDTH, y);
 		add(hip);
-		
+
 		x -= HIP_WIDTH;
 		GLine leg = new GLine(x , y, x, y + LEG_LENGTH);
 		add(leg);
 	}
-	
+
 	private void drawRightFoot() {
 		int x = endBeamxLocation + HIP_WIDTH/3;
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH + LEG_LENGTH/2;
-		
+
 		GImage shoe = new GImage("rightShoe.gif");
 		add(shoe, x, y);
 	}
-	
+
 	private void drawLeftFoot() {
 		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH + LEG_LENGTH/2;
-		
+
 		GImage shoe = new GImage("leftShoe.gif");
 		int x = endBeamxLocation -  (int) shoe.getWidth();
 		add(shoe, x, y);
 	}
-	
+
 	private void drawDeadHead() {
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
@@ -163,11 +163,13 @@ public class HangmanCanvas extends GCanvas {
 		head = new GImage("hungFace.gif");
 		add(head, x, y);
 	}
-	
+
 	public void drawHappyFace() {
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
-		remove(head);
+		if(head != null) {
+			remove(head);
+		}
 		head = new GImage("happyFace.gif");
 		add(head, x, y);
 	}
