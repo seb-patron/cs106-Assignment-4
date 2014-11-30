@@ -89,12 +89,12 @@ public class HangmanCanvas extends GCanvas {
 	public void updateIncorrectLetters(char ch) {
 		incorrectGuesses += ch;
 		int x = scaffoldXStart;
-		int y = scaffoldYStart*2 + SCAFFOLD_HEIGHT;
+		int y = 80 + SCAFFOLD_HEIGHT;
 		if (getElementAt(x, y) != null) {
 			remove(guesses);
 		}
 		guesses = new GLabel (incorrectGuesses, x, y);
-		guesses.setFont(new Font("Serif", Font.BOLD, 15));
+		guesses.setFont(new Font("Serif", Font.BOLD, 25));
 		add (guesses);
 	}
 
