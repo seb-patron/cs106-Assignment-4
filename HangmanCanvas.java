@@ -70,12 +70,12 @@ public class HangmanCanvas extends GCanvas {
 	public  void noteIncorrectGuess(int guessCounter) {
 		if (guessCounter == 7) drawHead();
 		if (guessCounter == 6) drawBody();
-//		if (guessCounter == 7) drawRightArm();
-//		if (guessCounter == 7) drawLeftArm();
-//		if (guessCounter == 7) drawRightLeg();
-//		if (guessCounter == 7) drawLeftLeg();
-//		if (guessCounter == 7) drawRightFoot();
-//		if (guessCounter == 7) drawLeftFoot();
+		if (guessCounter == 5) drawRightArm();
+//		if (guessCounter == 4) drawLeftArm();
+//		if (guessCounter == 3) drawRightLeg();
+//		if (guessCounter == 2) drawLeftLeg();
+//		if (guessCounter == 1) drawRightFoot();
+//		if (guessCounter == 0) drawLeftFoot();
 
 		
 	}
@@ -86,7 +86,6 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation;
 		GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
 		add(head);
-
 	}
 
 	private void drawBody() {
@@ -94,6 +93,14 @@ public class HangmanCanvas extends GCanvas {
 		int y = endRopeYLocation + HEAD_RADIUS*2;
 		GLine body = new GLine(x , y, x, y + BODY_LENGTH);
 		add(body);
+	}
+	
+	private void drawRightArm() {
+		int x = endBeamxLocation;
+		int y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
+		GLine arm = new GLine(x , y, x + UPPER_ARM_LENGTH, y);
+		add(arm);
+		
 	}
 
 
