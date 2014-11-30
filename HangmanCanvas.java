@@ -12,7 +12,13 @@ public class HangmanCanvas extends GCanvas {
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
+		drawScaffold();
 		drawHead();
+	}
+	
+	private void drawScaffold() {
+		GLine scaffold = new GLine(getWidth()/4 , 20 , getWidth()/4 , 300 );
+		add(scaffold);
 	}
 
 	private void drawHead() {
