@@ -92,7 +92,7 @@ public class Hangman extends ConsoleProgram {
 			ch = getCharacter();
 			checkLetter(ch);
 			println();
-			if (guessCounter == 0 ) {
+			if (guessCounter == 0 ) { //message displayed when player loses
 				println("Oh no! D:");
 				println("They hanged him!");
 				println();
@@ -103,7 +103,7 @@ public class Hangman extends ConsoleProgram {
 
 
 			}
-			if (word.indexOf("-") == -1 && guessCounter > 0) {
+			if (word.indexOf("-") == -1 && guessCounter > 0) { ///victory message
 				println("Whoo-ho!");
 				println("You saved the good man from hanging!");
 				canvas.displayWord(word);
@@ -113,6 +113,10 @@ public class Hangman extends ConsoleProgram {
 		}
 	}
 
+	/**
+	 * Plays GTA wasted sound effect
+	 * @param music
+	 */
 	private static void playSound(File music) {
 		try {
 			Clip clip = AudioSystem.getClip();
