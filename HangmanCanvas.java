@@ -24,6 +24,11 @@ public class HangmanCanvas extends GCanvas {
 	
 	private int scaffoldXStart = 20;
 	private int scaffoldYStart = 20;
+	
+	private int endBeamxLocation = scaffoldXStart + BEAM_LENGTH;
+
+	
+	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
 
 
 
@@ -37,6 +42,13 @@ public class HangmanCanvas extends GCanvas {
 		GLine scaffold = new GLine(scaffoldXStart , scaffoldYStart , 
 				scaffoldXStart , scaffoldYStart + SCAFFOLD_HEIGHT );
 		add(scaffold);
+		
+		GLine beam = new GLine (scaffoldXStart, scaffoldYStart , 
+				endBeamxLocation , scaffoldYStart);
+		add(beam);
+		GLine rope = new GLine (endBeamxLocation, scaffoldYStart , 
+				endBeamxLocation , endRopeYLocation);
+		add(rope);
 	}
 
 	private void drawHead() {
