@@ -60,7 +60,6 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
-		add(head);
 		//		if(guessCounter == 7) {
 		//			canvas.add(head);
 		//		}
