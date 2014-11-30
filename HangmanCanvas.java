@@ -72,7 +72,7 @@ public class HangmanCanvas extends GCanvas {
 		if (guessCounter == 5) drawRightArm();
 		if (guessCounter == 4) drawLeftArm();
 		if (guessCounter == 3) drawRightLeg();
-//		if (guessCounter == 2) drawLeftLeg();
+		if (guessCounter == 2) drawLeftLeg();
 //		if (guessCounter == 1) drawRightFoot();
 //		if (guessCounter == 0) drawLeftFoot();
 
