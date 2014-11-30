@@ -7,6 +7,23 @@
 import acm.graphics.*;
 ;
 public class HangmanCanvas extends GCanvas {
+	
+	
+	/* Constants for the simple version of the picture (in pixels) */
+	private static final int SCAFFOLD_HEIGHT = 360;
+	private static final int BEAM_LENGTH = 144;
+	private static final int ROPE_LENGTH = 18;
+	private static final int HEAD_RADIUS = 36;
+	private static final int BODY_LENGTH = 144;
+	private static final int ARM_OFFSET_FROM_HEAD = 28;
+	private static final int UPPER_ARM_LENGTH = 72;
+	private static final int LOWER_ARM_LENGTH = 44;
+	private static final int HIP_WIDTH = 36;
+	private static final int LEG_LENGTH = 108;
+	private static final int FOOT_LENGTH = 28;
+	
+	private int scaffoldXStart = 20;
+	private int scaffoldYStart = 20;
 
 
 
@@ -17,7 +34,8 @@ public class HangmanCanvas extends GCanvas {
 	}
 	
 	private void drawScaffold() {
-		GLine scaffold = new GLine(getWidth()/4 , 20 , getWidth()/4 , 300 );
+		GLine scaffold = new GLine(scaffoldXStart , scaffoldYStart , 
+				scaffoldXStart , scaffoldYStart + SCAFFOLD_HEIGHT );
 		add(scaffold);
 	}
 
@@ -65,17 +83,6 @@ public class HangmanCanvas extends GCanvas {
 
 
 
-	/* Constants for the simple version of the picture (in pixels) */
-	private static final int SCAFFOLD_HEIGHT = 360;
-	private static final int BEAM_LENGTH = 144;
-	private static final int ROPE_LENGTH = 18;
-	private static final int HEAD_RADIUS = 36;
-	private static final int BODY_LENGTH = 144;
-	private static final int ARM_OFFSET_FROM_HEAD = 28;
-	private static final int UPPER_ARM_LENGTH = 72;
-	private static final int LOWER_ARM_LENGTH = 44;
-	private static final int HIP_WIDTH = 36;
-	private static final int LEG_LENGTH = 108;
-	private static final int FOOT_LENGTH = 28;
+
 
 }
