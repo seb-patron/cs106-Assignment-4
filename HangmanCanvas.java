@@ -70,7 +70,7 @@ public class HangmanCanvas extends GCanvas {
 	public  void noteIncorrectGuess(int guessCounter) {
 		switch (guessCounter) {
 		case 7: drawHead();
-		case 6: drawBody();
+		case 5: drawBody();
 		//				case 5: drawRightArm();
 		//				case 4: drawLeftArm();
 		//				case 3: drawRightLeg();
@@ -84,7 +84,6 @@ public class HangmanCanvas extends GCanvas {
 
 
 	private void drawHead() {
-
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
 		GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
