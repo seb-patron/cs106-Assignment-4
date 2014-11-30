@@ -10,14 +10,18 @@ import acm.program.*;
 import acm.util.*;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class Hangman extends ConsoleProgram {
 
 	private HangmanLexicon hangmanWords = new HangmanLexicon();
-	
+
 	private HangmanCanvas canvas;
-	
+
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
@@ -26,11 +30,12 @@ public class Hangman extends ConsoleProgram {
 
 	/*is a random word*/
 	private String hiddenWord = pickWord();
-	
+
 	/*scrambled version of hidden word that is deciphered in game*/
 	public String word = scrambleWord();
-	
+
 	public char ch;
+
 
 	public void init() {
 		canvas = new HangmanCanvas();
@@ -38,10 +43,10 @@ public class Hangman extends ConsoleProgram {
 		canvas.reset();
 
 	}
-	
+
 	public void run() {
 		setUpGame();
-	//	canvas.reset();
+		//	canvas.reset();
 		playGame();
 	}
 
@@ -92,7 +97,11 @@ public class Hangman extends ConsoleProgram {
 				println("They hanged him!");
 				println();
 				println("The word was " + hiddenWord + ".");
-				break;
+
+				File music = new File("wasted.wav");
+				playSound(music);
+
+
 			}
 			if (word.indexOf("-") == -1 && guessCounter > 0) {
 				println("Whoo-ho!");
@@ -101,6 +110,16 @@ public class Hangman extends ConsoleProgram {
 				canvas.drawHappyFace();
 				break;
 			}
+		}
+	}
+
+	private static void playSound(File music) {
+		try {
+			Clip clip = AudioSystem.getClip();
+			clip.open(AudioSystem.getAudioInputStream(music));
+			clip.start();
+		}catch (Exception e) {
+			
 		}
 	}
 
@@ -165,7 +184,7 @@ public class Hangman extends ConsoleProgram {
 			guessCounter --;
 			canvas.noteIncorrectGuess(guessCounter);
 			canvas.updateIncorrectLetters(ch);
-			
+
 		}
 	}
 }
