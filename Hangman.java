@@ -100,10 +100,6 @@ public class Hangman extends ConsoleProgram {
 
 				File music = new File("wasted.wav");
 				playSound(music);
-				pause(200);
-				playSound(music);
-
-
 			}
 			if (word.indexOf("-") == -1 && guessCounter > 0) { ///victory message
 				println("Whoo-ho!");
