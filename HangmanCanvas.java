@@ -27,7 +27,6 @@ public class HangmanCanvas extends GCanvas {
 
 	private int endBeamxLocation = scaffoldXStart + BEAM_LENGTH;
 
-
 	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
 
 
@@ -115,8 +114,18 @@ public class HangmanCanvas extends GCanvas {
 		x -= UPPER_ARM_LENGTH;
 		y = endRopeYLocation + HEAD_RADIUS*2 + ARM_OFFSET_FROM_HEAD;
 		GLine lowerArm = new GLine(x , y, x, y + LOWER_ARM_LENGTH);
-		add(lowerArm);
+		add(lowerArm);	
+	}
+	
+	private void drawRightLeg() {
+		int x = endBeamxLocation;
+		int y = endRopeYLocation + HEAD_RADIUS*2 + BODY_LENGTH;
+		GLine hip = new GLine(x , y, x + HIP_WIDTH, y);
+		add(hip);
 		
+		x += HIP_WIDTH;
+		GLine leg = new GLine(x , y, x, y + LEG_LENGTH);
+		add(leg);
 	}
 
 
