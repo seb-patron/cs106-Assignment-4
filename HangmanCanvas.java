@@ -63,7 +63,7 @@ public class HangmanCanvas extends GCanvas {
 	private GLabel wordLabel;
 	public void displayWord(String word) {
 		int x = scaffoldXStart;
-		int y = 40 + SCAFFOLD_HEIGHT;
+		int y = 60 + SCAFFOLD_HEIGHT;
 		if (getElementAt(x, y) != null) {
 			remove(wordLabel);
 		}

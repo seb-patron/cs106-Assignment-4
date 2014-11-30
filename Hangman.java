@@ -98,6 +98,7 @@ public class Hangman extends ConsoleProgram {
 			if (word.indexOf("-") == -1 && guessCounter > 0) {
 				println("Whoo-ho!");
 				println("You saved the good man from hanging!");
+				canvas.displayWord(word);
 				canvas.drawHappyFace();
 				break;
 			}
