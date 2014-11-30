@@ -79,12 +79,12 @@ public class HangmanCanvas extends GCanvas {
 			drawDeadHead();
 		}
 	}
-
-
+	
+	private GImage head;
 	private void drawHead() {
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
-		GImage head = new GImage("face.gif");
+		head = new GImage("face.gif");
 		add(head, x, y);
 	}
 
@@ -159,9 +159,7 @@ public class HangmanCanvas extends GCanvas {
 	private void drawDeadHead() {
 		int x = endBeamxLocation - HEAD_RADIUS;
 		int y = endRopeYLocation;
-		if (getElementAt(x, y) !=null) {
-			remove(this);
-		}
+		remove(head);
 		//GImage head = new GImage("hungFace.gif");
 		//add(head, x, y);
 	}
