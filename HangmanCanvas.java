@@ -5,20 +5,15 @@
  */
 
 import acm.graphics.*;
-import acm.program.*;
-import acm.util.*;
-
+;
 public class HangmanCanvas extends GCanvas {
-
-
-	public GCanvas canvas;
 
 
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
-//		GLine rope = new GLine (20, 20, 80, 80);
-//		add(rope);
+		GLine rope = new GLine (20, 20, 80, 80);
+		add(rope);
 		drawScaffold();
 	//	drawHead();
 	}
