@@ -161,7 +161,6 @@ public class Hangman extends ConsoleProgram {
 		if (word.indexOf(ch) == -1){
 			println("Sorry, but there are no " + ch + "'s in the word.");
 			guessCounter--;
-			
 			canvas.noteIncorrectGuess(guessCounter);
 			
 		}
