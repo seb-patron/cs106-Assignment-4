@@ -7,7 +7,7 @@
 import acm.graphics.*;
 import acm.program.*;
 
-public class HangmanCanvas extends GraphicsProgram {
+public class HangmanCanvas extends GCanvas {
 
 
 	public GCanvas canvas;
@@ -19,8 +19,6 @@ public class HangmanCanvas extends GraphicsProgram {
 
 	//Draws cnavas and sets up hangman
 	public void drawCanvas() {
-		canvas = new GCanvas();
-		add(canvas);
 		drawHead();
 //		canvas.add(head);
 	}
