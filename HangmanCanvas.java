@@ -6,28 +6,38 @@
 
 import acm.graphics.*;
 import acm.program.*;
+import acm.util.*;
 
 public class HangmanCanvas extends GCanvas {
 
 
 	public GCanvas canvas;
-	
-	
+
+
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
+	//	drawScaffold();
 		drawHead();
 	}
 
-	//Draws cnavas and sets up hangman
-	public void drawCanvas() {
-
-
-		drawHead();
-//		canvas.add(head);
+	private void drawScaffold() {
+		double scaffoldTopX = getWidth()/2 - UPPER_ARM_LENGTH;
+		double scaffoldTopY = getHeight()/2 - BODY_LENGTH - HEAD_RADIUS*2 - ROPE_LENGTH;
+		double scaffoldBottomY = scaffoldTopY + SCAFFOLD_HEIGHT;
+		GLine scaffold= new GLine (scaffoldTopX, scaffoldTopY, scaffoldTopX, scaffoldBottomY);
+		add(scaffold);
+		double beamRightX = scaffoldTopX + BEAM_LENGTH;
+		GLine beam = new GLine(scaffoldTopX, scaffoldTopY, beamRightX, scaffoldTopY);
+		add(beam);
+		double ropeBottomY = scaffoldTopY + ROPE_LENGTH;
+		GLine rope = new GLine (beamRightX, scaffoldTopY, beamRightX, ropeBottomY);
+		add(rope);
 	}
-	
-	public void drawHead() {
+
+
+
+	private void drawHead() {
 		GOval head = new GOval(getWidth()/2, getHeight()/2,500, 500 );
 		head.setFilled(true);
 		add(head);
@@ -50,6 +60,7 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public static void noteIncorrectGuess(int guessCounter) {
+		add(head);
 		//		if(guessCounter == 7) {
 		//			canvas.add(head);
 		//		}
