@@ -14,7 +14,7 @@ public class HangmanCanvas extends GCanvas {
 	public void reset() {
 		GLine rope = new GLine (20, 20, 80, 80);
 		add(rope);
-		drawScaffold();
+//		drawScaffold();
 	//	drawHead();
 	}
 
