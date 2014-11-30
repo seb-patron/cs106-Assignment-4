@@ -31,7 +31,7 @@ public class HangmanCanvas extends GCanvas {
 
 	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
 	
-	private String incorrectGuesses;
+	private String incorrectGuesses ="";
 
 
 
