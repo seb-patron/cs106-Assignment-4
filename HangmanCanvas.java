@@ -35,7 +35,6 @@ public class HangmanCanvas extends GCanvas {
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
 		drawScaffold();
-		drawHead();
 	}
 	
 	private void drawScaffold() {
@@ -52,9 +51,12 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 	private void drawHead() {
-		GOval head = new GOval(getWidth()/2, getHeight()/2,500, 500 );
-		head.setFilled(true);
-		add(head);
+		
+		        double x = getWidth()/2 - UPPER_ARM_LENGTH + BEAM_LENGTH - HEAD_RADIUS;
+		        double y = getHeight()/2 - BODY_LENGTH - HEAD_RADIUS*2;
+		        GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
+		        add(head);
+		    
 	}
 
 	/**
@@ -73,21 +75,20 @@ public class HangmanCanvas extends GCanvas {
 	 * on the scaffold and adds the letter to the list of incorrect
 	 * guesses that appears at the bottom of the window.
 	 */
-	public static void noteIncorrectGuess(int guessCounter) {
-		//		if(guessCounter == 7) {
-		//			canvas.add(head);
-		//		}
-		//		switch (guessCounter) {
-		////		case 7: drawHead();
-		//		case 6: drawBody();
-		//		case 5: drawRightArm();
-		//		case 4: drawLeftArm();
-		//		case 3: drawRightLeg();
-		//		case 2: drawLeftLeg();
-		//		case 1: drawRightFoot();
-		//		case 0: drawLeftFoot();
-		//
-		//		}
+	public  void noteIncorrectGuess(int guessCounter) {
+		drawHead();
+		
+				switch (guessCounter) {
+				case 7: drawHead();
+//				case 6: drawBody();
+//				case 5: drawRightArm();
+//				case 4: drawLeftArm();
+//				case 3: drawRightLeg();
+//				case 2: drawLeftLeg();
+//				case 1: drawRightFoot();
+//				case 0: drawLeftFoot();
+		
+				}
 
 	}
 

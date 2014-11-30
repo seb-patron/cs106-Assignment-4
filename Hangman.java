@@ -162,7 +162,7 @@ public class Hangman extends ConsoleProgram {
 			println("Sorry, but there are no " + ch + "'s in the word.");
 			guessCounter--;
 			
-			HangmanCanvas.noteIncorrectGuess(guessCounter);
+			canvas.noteIncorrectGuess(guessCounter);
 			
 		}
 	}
