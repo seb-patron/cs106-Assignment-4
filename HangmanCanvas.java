@@ -12,27 +12,8 @@ public class HangmanCanvas extends GCanvas {
 
 	/** Resets the display so that only the scaffold appears */
 	public void reset() {
-		GLine rope = new GLine (20, 20, 80, 80);
-		add(rope);
-	//	drawScaffold();
 		drawHead();
 	}
-
-	private void drawScaffold() {
-//		double scaffoldTopX = getWidth()/2 - UPPER_ARM_LENGTH;
-//		double scaffoldTopY = getHeight()/2 - BODY_LENGTH - HEAD_RADIUS*2 - ROPE_LENGTH;
-//		double scaffoldBottomY = scaffoldTopY + SCAFFOLD_HEIGHT;
-//		GLine scaffold= new GLine (scaffoldTopX, scaffoldTopY, scaffoldTopX, scaffoldBottomY);
-//		add(scaffold);
-//		double beamRightX = scaffoldTopX + BEAM_LENGTH;
-//		GLine beam = new GLine(scaffoldTopX, scaffoldTopY, beamRightX, scaffoldTopY);
-//		add(beam);
-//		double ropeBottomY = scaffoldTopY + ROPE_LENGTH;
-		GLine rope = new GLine (20, 20, 80, 80);
-		add(rope);
-	}
-
-
 
 	private void drawHead() {
 		GOval head = new GOval(getWidth()/2, getHeight()/2,500, 500 );
