@@ -50,7 +50,6 @@ public class Hangman extends ConsoleProgram {
 	 */
 	public void setUpGame() {
 		pickWord();
-		println(hiddenWord);
 		println(word);
 		printWelcomeMessage();
 	}
