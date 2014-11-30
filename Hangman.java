@@ -163,6 +163,7 @@ public class Hangman extends ConsoleProgram {
 			println("Sorry, but there are no " + ch + "'s in the word.");
 			guessCounter --;
 			canvas.noteIncorrectGuess(guessCounter);
+			canvas.updateIncorrectLetters(ch);
 			
 		}
 	}

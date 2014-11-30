@@ -4,6 +4,8 @@
  * This file keeps track of the Hangman display.
  */
 
+import java.awt.Font;
+
 import acm.graphics.*;
 ;
 public class HangmanCanvas extends GCanvas {
@@ -28,6 +30,8 @@ public class HangmanCanvas extends GCanvas {
 	private int endBeamxLocation = scaffoldXStart + BEAM_LENGTH;
 
 	private int endRopeYLocation = scaffoldYStart + ROPE_LENGTH;
+	
+	private String incorrectGuesses;
 
 
 
@@ -78,6 +82,20 @@ public class HangmanCanvas extends GCanvas {
 			drawLeftFoot();		
 			drawDeadHead();
 		}
+	}
+	
+	private GLabel guesses;
+	
+	public void updateIncorrectLetters(char ch) {
+		incorrectGuesses += ch;
+		int x = scaffoldXStart;
+		int y = scaffoldYStart*2 + SCAFFOLD_HEIGHT;
+		if (getElementAt(x, y) != null) {
+			remove(guesses);
+		}
+		guesses = new GLabel (incorrectGuesses, x, y);
+		guesses.setFont(new Font("Serif", Font.BOLD, 15));
+		add (guesses);
 	}
 
 	private GImage head;
