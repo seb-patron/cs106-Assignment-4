@@ -50,14 +50,6 @@ public class HangmanCanvas extends GCanvas {
 		add(rope);
 	}
 
-	private void drawHead() {
-		
-		        double x = getWidth()/2 - UPPER_ARM_LENGTH + BEAM_LENGTH - HEAD_RADIUS;
-		        double y = getHeight()/2 - BODY_LENGTH - HEAD_RADIUS*2;
-		        GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
-		        add(head);
-		    
-	}
 
 	/**
 	 * Updates the word on the screen to correspond to the current
@@ -76,8 +68,6 @@ public class HangmanCanvas extends GCanvas {
 	 * guesses that appears at the bottom of the window.
 	 */
 	public  void noteIncorrectGuess(int guessCounter) {
-		drawHead();
-		
 				switch (guessCounter) {
 				case 7: drawHead();
 //				case 6: drawBody();
@@ -93,7 +83,14 @@ public class HangmanCanvas extends GCanvas {
 	}
 
 
-
+	private void drawHead() {
+		
+        double x = endBeamxLocation - HEAD_RADIUS;
+        double y =endRopeYLocation;
+        GOval head = new GOval (x, y, HEAD_RADIUS*2, HEAD_RADIUS*2);
+        add(head);
+    
+}
 
 
 
