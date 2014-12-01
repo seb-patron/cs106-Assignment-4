@@ -48,8 +48,8 @@ public class Hangman extends ConsoleProgram {
 		setUpGame();
 		while (true) {
 			playGame();
-			println("Click to play again");
-			readLine();
+			readLine("Click to play again");
+			guessCounter = 8;
 			canvas.reset();
 		}
 	}
