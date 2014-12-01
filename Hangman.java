@@ -46,7 +46,12 @@ public class Hangman extends ConsoleProgram {
 
 	public void run() {
 		setUpGame();
-		playGame();
+		while (true) {
+			playGame();
+			println("Click to play again");
+			readLine();
+			canvas.reset();
+		}
 	}
 
 	/**
@@ -120,7 +125,7 @@ public class Hangman extends ConsoleProgram {
 			clip.open(AudioSystem.getAudioInputStream(music));
 			clip.start();
 		}catch (Exception e) {
-			
+
 		}
 	}
 
