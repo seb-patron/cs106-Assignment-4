@@ -35,7 +35,10 @@ public class HangmanLexicon {
 
 	/** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		return wordCount;
+		int result;
+		result = wordList.size();
+		return result;
+		//return wordCount;
 	}
 
 	public String getWord(int index) {
