@@ -159,7 +159,7 @@ public class Hangman extends ConsoleProgram {
 	 * are satisfied
 	 */
 	public String checkInput(String getChar) {
-		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0)) || getChar.equals("") ) {
+		while (getChar.length() > 1 || Character.isDigit(getChar.charAt(0))) {
 			println("You may only enter one, valid letter at a time.");
 			getChar = readLine("Enter a letter: ");
 			if (getChar.length() < 1 && Character.isLetter(getChar.charAt(0))) break;
