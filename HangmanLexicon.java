@@ -13,7 +13,7 @@ public class HangmanLexicon {
 
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 
-	private int wordCount = 0;
+	private int wordCount;
 
 
 	private ArrayList <String> wordList = new ArrayList <String> ();
@@ -26,7 +26,6 @@ public class HangmanLexicon {
 				String line = rd.readLine();
 				if (line == null) break; //breaks when lines all read
 				wordList.add(line);
-				wordCount++;
 			}
 		} catch (IOException ex) {
 			//	println("Bad file");
@@ -35,10 +34,8 @@ public class HangmanLexicon {
 
 	/** Returns the number of words in the lexicon. */
 	public int getWordCount() {
-		int result;
-		result = wordList.size();
-		return result;
-		//return wordCount;
+		wordCount = wordList.size();
+		return wordCount;
 	}
 
 	public String getWord(int index) {
