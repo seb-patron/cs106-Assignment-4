@@ -45,8 +45,9 @@ public class Hangman extends ConsoleProgram {
 	}
 
 	public void run() {
-		setUpGame();
+//		setUpGame();
 		while (true) {
+			setUpGame();
 			playGame();
 			readLine("Click to play again");
 			guessCounter = 8;
