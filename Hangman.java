@@ -41,13 +41,11 @@ public class Hangman extends ConsoleProgram {
 		canvas = new HangmanCanvas();
 		add(canvas);
 		canvas.reset();
-
+		setFont("Ariel-16");
 	}
 
 	public void run() {
-		setFont("Ariel-16");
 		setUpGame();
-		//	canvas.reset();
 		playGame();
 	}
 
