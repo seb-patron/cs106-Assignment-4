@@ -180,7 +180,7 @@ public class Hangman extends ConsoleProgram {
 	public void checkLetter(char ch) {
 		for (int i = 0; i< hiddenWord.length(); i++) {
 			if (ch == hiddenWord.charAt(i)) {
-				println("MotherFucker!");
+				//println("MotherFucker!");
 				word = word.substring(0, i) + ch + word.substring(i + 1);
 			}
 		}
