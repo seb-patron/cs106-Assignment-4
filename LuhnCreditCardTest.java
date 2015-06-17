@@ -13,12 +13,12 @@ public class LuhnCreditCardTest{
 			String str = sc.nextLine();
 			boolean validCreditCard = luhnTest(str);
 			if (validCreditCard == false) {
-				println("Fagoot");
+				System.out.println("Fagoot");
 			}
 		}
 	}
 
-	public boolean luhnTest(String str) {
+	public static boolean luhnTest(String str) {
 		return false;
 
 	} 
