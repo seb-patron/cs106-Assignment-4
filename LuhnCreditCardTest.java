@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
-public class LuhnCreditCardTest {
+import acm.program.*;
+
+public class LuhnCreditCardTest extends ConsoleProgram{
 
 	static Scanner sc = new Scanner(System.in);
 
