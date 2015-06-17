@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
-import acm.program.*;
-
-public class LuhnCreditCardTest extends ConsoleProgram{
+public class LuhnCreditCardTest{
 
 	static Scanner sc = new Scanner(System.in);
+	
 
 	public static void main(String[] args) {
 		System.out.print("Yolo");
-		int x = sc.nextInt();
-		System.out.println("You entered " + x);
+		String str = sc.nextLine();
+		System.out.println("You entered " + str);
 	}
 }
