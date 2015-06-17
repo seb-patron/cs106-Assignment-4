@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import acm.program.ConsoleProgram;
-
 public class LuhnCreditCardTest {
 
 	static Scanner sc = new Scanner(System.in);
