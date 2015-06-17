@@ -8,12 +8,14 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 	
 	public void run() {
 		println("Hey");
+		int x = main();
 	}
 	
-	public static void main(String[] args) {
+	public int main() {
 		System.out.print("Enter an interger");
 		int x = sc.nextInt();
 		System.out.println(x);
+		return x;
     }
 	
 }
