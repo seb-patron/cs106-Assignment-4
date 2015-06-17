@@ -6,7 +6,7 @@ public class LuhnCreditCardTest{
 	
 
 	public static void main(String[] args) {
-		System.out.print("Yolo");
+		System.out.println("Yolo");
 		String str = sc.nextLine();
 		System.out.println("You entered " + str);
 	}
