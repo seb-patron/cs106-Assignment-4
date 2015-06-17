@@ -4,7 +4,8 @@ public class LuhnCreditCardTest{
 
 	static Scanner sc = new Scanner(System.in);
 
-
+	private int evenSum;
+	private int oddSum;
 
 
 	public static void main(String[] args) {
@@ -19,7 +20,20 @@ public class LuhnCreditCardTest{
 	}
 
 	public static boolean luhnTest(String str) {
+		
+		String reverse = reverseString(str);
+		for (int i = 0; i < reverse.length(); i++) {
+			if (i%10 = 0) {
+				evenSum = (reverse.charAt(i)*2) ;
+			}
+			
+		}
 		return false;
 
 	} 
+	
+	public String reverseString(String str) {
+		
+		return result;
+	}
 }
