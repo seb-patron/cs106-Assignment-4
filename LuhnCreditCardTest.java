@@ -74,6 +74,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 
 	public void evenSumCalulation() {
 		int x = (int) ((creditCardNumber%10) *2);
+		if (x > 9) x= x-9;
 		evenSum += x;
 	}
 
