@@ -39,7 +39,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 	 * Adds each digit to their appropriate sum sum
 	 */
 	public void testCreditCard() {
-		int i = 0;
+		int i = 1;
 		while (creditCardNumber > 0 ) {
 			if (i%2 != 0) {
 				oddSumCalculation();
