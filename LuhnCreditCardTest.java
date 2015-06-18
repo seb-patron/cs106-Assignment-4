@@ -18,7 +18,7 @@ public class LuhnCreditCardTest {
 
 		public void luhnTest( String number) {
 			while (true) {
-				creditCardNumber = Long.parseLong(number);
+				creditCardNumber = Long.valueOf(number);
 				testCreditCard();
 				checkIfCardIsValid();
 				printResult();
