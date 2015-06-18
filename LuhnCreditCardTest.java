@@ -13,12 +13,25 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 			String number = "49927398716";
 			println(number);
 			creditCardNumber = Long.valueOf(number);
+			creditCardNumber = numberReversal();
 			println(creditCardNumber);
 			testCreditCard();
 			checkIfCardIsValid();
 			printResult();
 
 		//}
+	}
+	
+	private void numberReversal() {
+		long reverseOfN = 0;
+		long n = creditCardNumber;
+		while (n != 0) {
+			reverseOfN = reverseOfN * 10;
+			println(reverseOfN);
+			reverseOfN = reverseOfN + n%10;
+			println(reverseOfN);
+			n = n/10;
+		}
 	}
 
 	/**
