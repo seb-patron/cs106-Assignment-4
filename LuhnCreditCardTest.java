@@ -13,6 +13,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 			String number = "49927398717";
 			println(number);
 			creditCardNumber = Long.valueOf(number);
+			println(creditCardNumber);
 			testCreditCard();
 			checkIfCardIsValid();
 			printResult();
