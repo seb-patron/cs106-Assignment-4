@@ -61,9 +61,9 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 
 	public void printResult() {
 		if (validCreditCard == true) {
-			System.out.println("The credit card number is valid");
+			println("The credit card number is valid");
 		} else {
-			System.out.println("Not a valid card number");
+			println("Not a valid card number");
 		}
 	}
 }
