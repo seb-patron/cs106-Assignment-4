@@ -9,15 +9,15 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 
 
 	public void run() {
-		while (true) {
-			String number = readLine();
+		//while (true) {
+			String number = "49927398716";
 			println(number);
 			creditCardNumber = Long.valueOf(number);
 			testCreditCard();
 			checkIfCardIsValid();
 			printResult();
 
-		}
+		//}
 	}
 
 	/**
