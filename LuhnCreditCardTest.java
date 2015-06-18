@@ -1,108 +1,117 @@
 import acm.program.*;
 
-public class LuhnCreditCardTest extends ConsoleProgram{
+public class LuhnCreditCardTest {
 
 	private int oddSum;
 	private int evenSum;
 	private long creditCardNumber;
 	private boolean validCreditCard;
-	
-	public void run() {
-		while (true) {
-			creditCardNumber = readInt();
-			testCreditCard();
-			checkIfCardIsValid();
-			printResult();
-			
+
+	public class Luhn {
+		
+		public  void main(String[] args) {
+			luhnTest("49927398716");
+//			System.out.println(luhnTest("49927398717"));
+//			System.out.println(luhnTest("1234567812345678"));
+//			System.out.println(luhnTest("1234567812345670"));
 		}
-	}
-	
-	/**
-	 * Adds each digit to their appropriate sum sum
-	 */
-	public void testCreditCard() {
-		int i = 0;
-		while (creditCardNumber > 0 ) {
-			if (i%10 != 0) {
-				oddSumCalculation();
-			} else {
-				evenSumCalulation();
+
+		public void luhnTest( String number) {
+			while (true) {
+				creditCardNumber = Long.parseLong(number);
+				testCreditCard();
+				checkIfCardIsValid();
+				printResult();
+
 			}
-			creditCardNumber = creditCardNumber/10;
-			i++;
 		}
-	}
-	
-	/**
-	 * checks to see if the last digit from the result of adding @oddSum and @evenSum
-	 * is 0. If it is 0 it gives the @validCreditCard variable a true value
-	 */
-	public void checkIfCardIsValid() {
-		int test = oddSum + evenSum;
-		if (test%10 == 0) {
-			validCreditCard = true;
-		} else {
-			validCreditCard = false;
+
+		/**
+		 * Adds each digit to their appropriate sum sum
+		 */
+		public void testCreditCard() {
+			int i = 0;
+			while (creditCardNumber > 0 ) {
+				if (i%10 != 0) {
+					oddSumCalculation();
+				} else {
+					evenSumCalulation();
+				}
+				creditCardNumber = creditCardNumber/10;
+				i++;
+			}
 		}
-	}
-	
-	public void oddSumCalculation() {
-		int x = creditCardNumber%10;
-		oddSum += x;
-	}
-	
-	public void evenSumCalulation() {
-		int x = (creditCardNumber%10) *2;
-		evenSum += x;
-	}
-	
-	public void printResult() {
-		if (validCreditCard == true) {
-			println("The credit card number is valid");
-		} else {
-			println("Not a valid card number");
+
+		/**
+		 * checks to see if the last digit from the result of adding @oddSum and @evenSum
+		 * is 0. If it is 0 it gives the @validCreditCard variable a true value
+		 */
+		public void checkIfCardIsValid() {
+			int test = oddSum + evenSum;
+			if (test%10 == 0) {
+				validCreditCard = true;
+			} else {
+				validCreditCard = false;
+			}
+		}
+
+		public void oddSumCalculation() {
+			int x = (int) (creditCardNumber%10);
+			oddSum += x;
+		}
+
+		public void evenSumCalulation() {
+			int x = (int) ((creditCardNumber%10) *2);
+			evenSum += x;
+		}
+
+		public void printResult() {
+			if (validCreditCard == true) {
+				System.out.println("The credit card number is valid");
+			} else {
+				System.out.println("Not a valid card number");
+			}
 		}
 	}
 }
 
 
-
-//import java.util.Scanner;
-//
-//public class LuhnCreditCardTest{
-//
-//	static Scanner sc = new Scanner(System.in);
-//
-//	private int evenSum;
-//	private int oddSum;
-//
-//
-//	public static void main(String[] args) {
-//		while (true) {
-//			System.out.println("Enter a credit card number to be validated");
-//			String str = sc.nextLine();
-//			boolean validCreditCard = luhnTest(str);
-//			if (validCreditCard == false) {
-//				System.out.println("Fagoot");
-//			}
-//		}
-//	}
-//
-//	public static boolean luhnTest(String str) {
-//		
-//		String reverse = reverseString(str);
-//		for (int i = 0; i < reverse.length(); i++) {
-//			if (i%10 = 0) {
-//				evenSum = (reverse.charAt(i)*2) ;
-//			}
-//			
-//		}
-//		return false;
-//
-//	} 
-//	
-//	public String reverseString(String str) {
-//		
-//		return result;
-//	}
-//}
+	//import java.util.Scanner;
+	//
+	//public class LuhnCreditCardTest{
+	//
+	//	static Scanner sc = new Scanner(System.in);
+	//
+	//	private int evenSum;
+	//	private int oddSum;
+	//
+	//
+	//	public static void main(String[] args) {
+	//		while (true) {
+	//			System.out.println("Enter a credit card number to be validated");
+	//			String str = sc.nextLine();
+	//			boolean validCreditCard = luhnTest(str);
+	//			if (validCreditCard == false) {
+	//				System.out.println("Fagoot");
+	//			}
+	//		}
+	//	}
+	//
+	//	public static boolean luhnTest(String str) {
+	//		
+	//		String reverse = reverseString(str);
+	//		for (int i = 0; i < reverse.length(); i++) {
+	//			if (i%10 = 0) {
+	//				evenSum = (reverse.charAt(i)*2) ;
+	//			}
+	//			
+	//		}
+	//		return false;
+	//
+	//	} 
+	//	
+	//	public String reverseString(String str) {
+	//		
+	//		return result;
+	//	}
+	//}
