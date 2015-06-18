@@ -16,7 +16,7 @@ public class LuhnCreditCardTest {
 //			System.out.println(luhnTest("1234567812345670"));
 		//}
 
-		public void luhnTest( String number) {
+		public void run() {
 			while (true) {
 				String number1 = "49927398716";
 				creditCardNumber = Long.valueOf(number1);
