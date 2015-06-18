@@ -4,7 +4,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 
 	private int oddSum;
 	private int evenSum;
-	private int creditCardNumber;
+	private long creditCardNumber;
 	private boolean validCreditCard;
 	
 	public void run() {
