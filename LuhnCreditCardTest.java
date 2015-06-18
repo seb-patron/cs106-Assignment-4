@@ -9,16 +9,16 @@ public class LuhnCreditCardTest {
 
 	public class Luhn {
 		
-		public  void main(String[] args) {
-			luhnTest("49927398716");
+//		public  void main(String[] args) {
+//			luhnTest("49927398716");
 //			System.out.println(luhnTest("49927398717"));
 //			System.out.println(luhnTest("1234567812345678"));
 //			System.out.println(luhnTest("1234567812345670"));
-		}
+//		}
 
-		public void luhnTest( String number) {
+		public void run() {
 			while (true) {
-//				String number = "49927398716";
+				String number = "49927398716";
 				creditCardNumber = Long.valueOf(number);
 				testCreditCard();
 				checkIfCardIsValid();
