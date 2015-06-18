@@ -29,10 +29,13 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 		while (creditCardNumber > 0 ) {
 			if (i%10 != 0) {
 				oddSumCalculation();
+				println("the new odd sum is " + oddSum);
 			} else {
 				evenSumCalulation();
+				println("the new evenSum is " + evenSum);
 			}
 			creditCardNumber = creditCardNumber/10;
+			println("Credit card number is now" + creditCardNumber);
 			i++;
 		}
 	}
