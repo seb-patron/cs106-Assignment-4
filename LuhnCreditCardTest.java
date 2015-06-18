@@ -1,6 +1,6 @@
 import acm.program.*;
 
-public class LuhnCreditCardTest {
+public class LuhnCreditCardTest extends ConsoleProgram{
 
 	private int oddSum;
 	private int evenSum;
