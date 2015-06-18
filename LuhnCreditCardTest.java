@@ -9,7 +9,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 
 
 	public void run() {
-		//while (true) {
+		while (true) {
 			String number = readLine("Enter a card number to test ");
 			println(number);
 			creditCardNumber = Long.valueOf(number);
@@ -19,7 +19,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 			checkIfCardIsValid();
 			printResult();
 
-		//}
+		}
 	}
 	
 	private long numberReversal() {
