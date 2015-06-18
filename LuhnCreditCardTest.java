@@ -27,7 +27,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 	public void testCreditCard() {
 		int i = 0;
 		while (creditCardNumber > 0 ) {
-			if (i%10 != 0) {
+			if (i%2 != 0) {
 				oddSumCalculation();
 				println("the new odd sum is " + oddSum);
 			} else {
