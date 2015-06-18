@@ -18,6 +18,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 			testCreditCard();
 			checkIfCardIsValid();
 			printResult();
+			println();
 
 		}
 	}
