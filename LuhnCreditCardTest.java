@@ -22,7 +22,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 		//}
 	}
 	
-	private void numberReversal() {
+	private long numberReversal() {
 		long reverseOfN = 0;
 		long n = creditCardNumber;
 		while (n != 0) {
@@ -32,6 +32,7 @@ public class LuhnCreditCardTest extends ConsoleProgram{
 			println(reverseOfN);
 			n = n/10;
 		}
+		return reverseOfN;
 	}
 
 	/**
